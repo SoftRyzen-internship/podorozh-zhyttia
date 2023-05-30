@@ -1,12 +1,13 @@
+const { i18n } = require('./next-i18next.config');
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ["www.datocms-assets.com"],
+    domains: ['www.datocms-assets.com'],
   },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) =>
-      rule.test?.test?.(".svg")
+      rule.test?.test?.('.svg')
     );
 
     config.module.rules.push(
@@ -20,7 +21,7 @@ const nextConfig = {
         test: /.svg$/i,
         issuer: /.[jt]sx?$/,
         resourceQuery: { not: /url/ },
-        use: ["@svgr/webpack"],
+        use: ['@svgr/webpack'],
       }
     );
 
@@ -28,6 +29,7 @@ const nextConfig = {
 
     return config;
   },
+  i18n,
 };
 
 module.exports = nextConfig;
