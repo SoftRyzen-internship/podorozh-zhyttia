@@ -1,7 +1,7 @@
-import { FC } from "react";
-import Head from "next/head";
+import { FC } from 'react';
+import Head from 'next/head';
 
-import { TypeLayoutProps } from "@/components/Layout/types";
+import { TypeLayoutProps } from '@/components/Layout/types';
 
 const Layout: FC<TypeLayoutProps> = ({ children }) => {
   return (
