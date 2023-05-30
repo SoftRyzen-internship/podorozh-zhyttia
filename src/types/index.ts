@@ -1,8 +1,8 @@
-export type TypePsychologicalAssistant = {
+export type TypePsychologist = {
   id: string;
-  nameAuthor: string;
+  name: string;
   description: string;
-  authorPhoto: {
+  photo: {
     alt: string;
     url: string;
   };
