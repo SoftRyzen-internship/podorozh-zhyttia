@@ -7,6 +7,15 @@ import { request } from '@/api/datocms';
 import { DATO_CMS_QUERY } from '@/constants';
 import { TypeBanner, TypePsychologicalAssistant } from '@/types';
 
+import HeroSection from '@/sections/HeroSection';
+import MentalSupportSection from '@/sections/MentalSupportSection';
+import DonateSection from '@/sections/DonateSection';
+import FundSupportSection from '@/sections/FundSupportSection';
+import FeedbackSection from '@/sections/FeedbackSection';
+import BookSection from '@/sections/BookSection';
+import ReportSection from '@/sections/ReportSection';
+import GallerySection from '@/sections/GallerySection';
+
 type TypeHomeProps = {
   data: {
     allPsychologicalAssistants: TypePsychologicalAssistant[];
@@ -20,10 +29,16 @@ const Home: FC<TypeHomeProps> = ({ data }) => {
   const { t } = useTranslation('common');
 
   return (
-    <div className="container">
-      <h1 className="text-accent">{t('h1')}</h1>
-      <p>{t('title')}</p>
-    </div>
+    <>
+      <HeroSection />
+      <MentalSupportSection />
+      <DonateSection />
+      <FundSupportSection />
+      <FeedbackSection />
+      <BookSection />
+      <ReportSection />
+      <GallerySection />
+    </>
   );
 };
 
