@@ -1,6 +1,6 @@
 export interface IRequestParams {
   query: string;
-  variables: Record<string, number>;
+  variables: Record<string, any>;
   includeDrafts?: boolean;
   excludeInvalid?: boolean;
 }
