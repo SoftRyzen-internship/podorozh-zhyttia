@@ -1,0 +1,13 @@
+@tailwind components;
+
+@layer components {
+  .title {
+    @apply text-base tablet:text-sm desktop:text-lg leading-7 font-bold mb-2 tablet:mb-3;
+  }
+  .text {
+    @apply text-base tablet:text-sm desktop:text-lg leading-7 font-normal mb-5 desktop:mb-7;
+  }
+  .last {
+    @apply mb-0;
+  }
+}

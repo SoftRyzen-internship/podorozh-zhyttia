@@ -3,6 +3,7 @@ import { Tab } from '@headlessui/react';
 
 import PryvatTab from './PryvatTab';
 import MonoTab from './MonoTab';
+import SwiftTab from './SwiftTab';
 import PayPalTab from './PayPalTab';
 
 const MyTabs: FC = () => {
@@ -15,7 +16,7 @@ const MyTabs: FC = () => {
         className="grid grid-cols-2 desktop:grid-cols-4 gap-5 tablet:gap-8 mb-10 tablet:mb-[60px]"
       >
         {payments.map(payment => (
-          <Tab as="li" className="focus:outline-none">
+          <Tab as="li" className="focus:outline-none" key={payment}>
             {({ selected }) => (
               <button
                 className={`${
@@ -37,7 +38,9 @@ const MyTabs: FC = () => {
         <Tab.Panel>
           <MonoTab />
         </Tab.Panel>
-        <Tab.Panel>Контент 3</Tab.Panel>
+        <Tab.Panel>
+          <SwiftTab />
+        </Tab.Panel>
         <Tab.Panel>
           <PayPalTab />
         </Tab.Panel>
