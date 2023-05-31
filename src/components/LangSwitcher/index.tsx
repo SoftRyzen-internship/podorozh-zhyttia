@@ -1,7 +1,5 @@
 import { useRouter } from 'next/router';
 
-import style from './styles.module.css';
-
 const LangSwitcher = () => {
   const router = useRouter();
   const { locale } = router;
@@ -11,14 +9,13 @@ const LangSwitcher = () => {
   };
 
   return (
-    <ul className="flex gap-6 font-semibold">
+    <ul className="flex gap-6 text-base font-semibold">
       <li>
         <button
           onClick={() => handleLangChange('uk')}
-          className={
-            `${locale === 'uk' ? 'text-accent' : 'text-black-charcoal'} ` +
-            style.verticalLine
-          }
+          className={`${
+            locale === 'uk' ? 'text-accent' : 'text-black-charcoal'
+          } relative after:absolute after:content-[''] after:w-[1px] after:h-6 after:bg-[#c3c3c3] after:-right-3 after:pointer-events-none`}
           disabled={locale === 'uk'}
         >
           UA
