@@ -2,7 +2,7 @@ export type TypePsychologist = {
   id: string;
   name: string;
   description: string;
-  photo: {
+  psychologistPhoto: {
     alt: string;
     url: string;
   };

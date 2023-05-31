@@ -30,7 +30,7 @@ const Home: FC<TypeHomeProps> = ({ data }) => {
   return (
     <>
       <HeroSection />
-      <MentalSupportSection />
+      <MentalSupportSection allPsychologists={allPsychologists} />
       <DonateSection />
       <FundSupportSection />
       <FeedbackSection />

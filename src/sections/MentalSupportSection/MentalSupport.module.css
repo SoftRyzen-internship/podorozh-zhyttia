@@ -1,0 +1,18 @@
+.mentalSupport {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url('../../../public/images/psychological/Frame1.jpg');
+}
+
+@media (min-width: 768px) {
+  .mentalSupport {
+    background-image: url('../../../public/images/psychological/Frame2.jpg');
+  }
+}
+
+@media (min-width: 1280px) {
+  .mentalSupport {
+    background-image: url('../../../public/images/psychological/Frame3.jpg');
+  }
+}
