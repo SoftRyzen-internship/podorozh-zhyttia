@@ -2,6 +2,7 @@ import { FC, useState } from 'react';
 import { Tab } from '@headlessui/react';
 
 import PryvatTab from './PryvatTab';
+import MonoTab from './MonoTab';
 
 const MyTabs: FC = () => {
   const [payments] = useState(['Приват24', 'Mono', 'SWIFT', 'PayPal']);
@@ -32,7 +33,9 @@ const MyTabs: FC = () => {
         <Tab.Panel>
           <PryvatTab />
         </Tab.Panel>
-        <Tab.Panel>Content 2</Tab.Panel>
+        <Tab.Panel>
+          <MonoTab />
+        </Tab.Panel>
         <Tab.Panel>Content 3</Tab.Panel>
         <Tab.Panel>Content 4</Tab.Panel>
       </Tab.Panels>
