@@ -5,7 +5,7 @@ import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 
 import { request } from '@/api/datocms';
 import { DATO_CMS_QUERY } from '@/constants';
-import { TypeBanner, TypePsychologicalAssistant } from '@/types';
+import { TypeBanner, TypePsychologist } from '@/types';
 
 import HeroSection from '@/sections/HeroSection';
 import MentalSupportSection from '@/sections/MentalSupportSection';
@@ -18,14 +18,13 @@ import GallerySection from '@/sections/GallerySection';
 
 type TypeHomeProps = {
   data: {
-    allPsychologicalAssistants: TypePsychologicalAssistant[];
+    allPsychologists: TypePsychologist[];
     allBanners: TypeBanner[];
   };
 };
 
 const Home: FC<TypeHomeProps> = ({ data }) => {
-  const { allPsychologicalAssistants: Assistants, allBanners } = data;
-
+  const { allPsychologists, allBanners } = data;
   const { t } = useTranslation('common');
 
   return (

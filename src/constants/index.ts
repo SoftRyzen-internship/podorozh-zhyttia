@@ -1,14 +1,14 @@
-export const DATO_CMS_QUERY = `query assistants($_locale: SiteLocale, $_first: IntType, $_skip: IntType) {
-  allPsychologicalAssistants(locale: $_locale, first: $_first, skip: $_skip) {
+export const DATO_CMS_QUERY = `query PSYCHOLOGIST($_locale: SiteLocale, $_first: IntType, $_skip: IntType) {
+  allPsychologists(locale: $_locale, first: $_first, skip: $_skip) {
     id
-    nameAuthor
+    name
     description
-    authorPhoto {
-      alt
+    psychologistPhoto {
       url
+      alt
     }
   }
-  allBanners (locale: $_locale, first: $_first, skip: $_skip) {
+  allBanners(locale: $_locale) {
     id
     title
     photo {
