@@ -11,9 +11,9 @@ const Layout: FC<TypeLayoutProps> = ({ children }) => {
       <Head>
         <title>Подорож життя</title>
       </Head>
-      {/* <Header /> */}
+      <Header />
       <main>{children}</main>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

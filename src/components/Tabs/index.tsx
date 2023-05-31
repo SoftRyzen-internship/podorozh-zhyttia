@@ -1,35 +1,26 @@
-import { FC, useState } from 'react';
+import { FC } from 'react';
 import { Tab } from '@headlessui/react';
+import { useTranslation } from 'next-i18next';
 
+import TabButton from '../TabButton';
 import PryvatTab from './PryvatTab';
 import MonoTab from './MonoTab';
 import SwiftTab from './SwiftTab';
 import PayPalTab from './PayPalTab';
 
-const MyTabs: FC = () => {
-  const [payments] = useState(['Приват24', 'Mono', 'SWIFT', 'PayPal']);
+const Tabs: FC = () => {
+  const { t } = useTranslation();
 
   return (
     <Tab.Group>
       <Tab.List
         as="ul"
-        className="grid grid-cols-2 desktop:grid-cols-4 gap-5 tablet:gap-8 mb-10 tablet:mb-[60px]"
+        className="grid grid-cols-2 desktop:grid-cols-4 gap-5 tablet:gap-8 mt-8 tablet:mt-10 desktop:mt-[60px] mb-10 tablet:mb-[60px]"
       >
-        {payments.map(payment => (
-          <Tab as="li" className="focus:outline-none" key={payment}>
-            {({ selected }) => (
-              <button
-                className={`${
-                  selected
-                    ? 'bg-accent text-white'
-                    : ' bg-white text-accent border border-accent hover:text-accent-dark focus:text-accent-dark hover:border-accent-dark focus:border-accent-dark'
-                } w-full tablet:w-[336px] desktop:w-[280px] h-[48px] text-sm tablet:text-lg font-semibold leading-7 rounded focus:outline-none`}
-              >
-                {payment}
-              </button>
-            )}
-          </Tab>
-        ))}
+        <TabButton>{t('donate.private24')}</TabButton>
+        <TabButton>Mono</TabButton>
+        <TabButton>SWIFT</TabButton>
+        <TabButton>PayPal</TabButton>
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
@@ -49,4 +40,4 @@ const MyTabs: FC = () => {
   );
 };
 
-export default MyTabs;
+export default Tabs;

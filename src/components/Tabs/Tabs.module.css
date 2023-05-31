@@ -7,7 +7,10 @@
   .text {
     @apply text-base tablet:text-sm desktop:text-lg leading-7 font-normal mb-5 desktop:mb-7;
   }
-  .last {
+  .lastItem {
     @apply mb-0;
+  }
+  .itemGap {
+    @apply mb-8 tablet:mb-10 desktop:mb-20;
   }
 }

@@ -1,12 +1,19 @@
 import { FC } from 'react';
+import { useTranslation } from 'next-i18next';
 
+import Heading from '@/components/Heading';
 import MyTabs from '@/components/Tabs';
 
 const DonateSection: FC = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="container">
-      <MyTabs />
-    </div>
+    <section id="donate" className="py-10 tablet:py-20 desktop:py-[100px]">
+      <div className="container">
+        <Heading>{t('donate.title')}</Heading>
+        <MyTabs />
+      </div>
+    </section>
   );
 };
 

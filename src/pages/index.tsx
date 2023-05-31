@@ -29,14 +29,14 @@ const Home: FC<TypeHomeProps> = ({ data }) => {
 
   return (
     <>
-      {/* <HeroSection />
-      <MentalSupportSection /> */}
+      <HeroSection />
+      <MentalSupportSection />
       <DonateSection />
-      {/* <FundSupportSection />
+      <FundSupportSection />
       <FeedbackSection />
       <BookSection />
       <ReportSection />
-      <GallerySection /> */}
+      <GallerySection />
     </>
   );
 };

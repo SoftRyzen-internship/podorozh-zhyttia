@@ -25,7 +25,9 @@ const SwiftTab: FC = () => {
         <p className={s.text}>PBANUA2X </p>
 
         <h4 className={s.title}>Company address:</h4>
-        <p className={s.text}>UA 04214 м Київ вул Героїв Днiпра б.53 кв.3</p>
+        <p className={`${s.text} ${s.itemGap}`}>
+          UA 04214 м Київ вул Героїв Днiпра б.53 кв.3
+        </p>
 
         <h4 className={s.title}>Account in the correspondent bank</h4>
         <p className={s.text}>400886700401</p>
@@ -34,7 +36,7 @@ const SwiftTab: FC = () => {
         <p className={s.text}>COBADEFF</p>
 
         <h4 className={s.title}>Correspondent bank</h4>
-        <p className={`${s.text} ${s.last}`}>
+        <p className={`${s.text} ${s.lastItem}`}>
           Commerzbank AG, Frankfurt am Main, Germany
         </p>
       </div>
@@ -59,7 +61,9 @@ const SwiftTab: FC = () => {
         <p className={s.text}>PBANUA2X </p>
 
         <h4 className={s.title}>Company address:</h4>
-        <p className={s.text}>UA 04214 м Київ вул Героїв Днiпра б.53 кв.3</p>
+        <p className={`${s.text} ${s.itemGap}`}>
+          UA 04214 м Київ вул Героїв Днiпра б.53 кв.3
+        </p>
 
         <h4 className={s.title}>Account in the correspondent bank</h4>
         <p className={s.text}>001-1-000080</p>
@@ -68,7 +72,7 @@ const SwiftTab: FC = () => {
         <p className={s.text}>CHASUS33</p>
 
         <h4 className={s.title}>Correspondent bank</h4>
-        <p className={`${s.text} ${s.last}`}>
+        <p className={`${s.text} ${s.lastItem}`}>
           JP Morgan Chase Bank, New York ,USA
         </p>
       </div>
