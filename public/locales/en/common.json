@@ -1,4 +1,65 @@
 {
-  "h1": "Hello world!!!",
-  "title": "Live travel"
+  "nav": {
+    "psychological_help": "Psychological help",
+    "how_are_you": "How are you?",
+    "reports": "Reports",
+    "gallery": "Gallery",
+    "contacts": "Contacts"
+  },
+  "btn": {
+    "donate": "Donate",
+    "talk": "Talk to psychologist",
+    "support": "Support",
+    "submit": "Submit",
+    "more": "Read more",
+    "report": "See reporting"
+  },
+  "hero": {
+    "title": "Charitable Foundation \"Podorozh ZHYTTIA\"",
+    "description": "We organize fundraising for units of the Armed Forces of Ukraine by request. Also we will be happy to help in questions of rehabilitation"
+  },
+  "psyhological_help": "Psychological help",
+  "donate": {
+    "title": "Donate",
+    "private24": "Private24",
+    "card": "Card:",
+    "link": "Link to online transfer"
+  },
+  "support": {
+    "title": "Donate",
+    "description": "To support charity foundation. Foundation do not pay any salaries as volunteers work here. And we will be happy to get support"
+  },
+  "feedback": {
+    "title": "Contact to psychologist",
+    "step1": "If you are in despair, hopelessness, in a difficult situation, have lost faith, meanings, support.",
+    "step2": "If you lost a loved one or a dear person, or a friend",
+    "step3": "If you need support or help",
+    "step4": "If you simply have something to say - write."
+  },
+  "form": {
+    "name": "Name",
+    "phone": "Phone",
+    "comment": "Comment",
+    "error": {
+      "name": "*Check that the data is entered correctly",
+      "phone": "*Incorrect number format"
+    },
+    "success": "Your message has been sent successfully"
+  },
+  "book": {
+    "title": "How are you?",
+    "subtitle": "Books for psychological support to each other",
+    "description": "Books for military and civilians, that help to learn how to give psychological support to each other during the war. Because of the war, there are a lot of people with the trauma experience and there are not enough psychologists. That’s why each of us can be a psychologist a little bit for those who need support or help.",
+    "author": "Anton Semenov, psychologist"
+  },
+  "report": {
+    "title": "Reports",
+    "description": "Here you can check how we spend fundraised money"
+  },
+  "gallery": "Gallery",
+  "footer": {
+    "contacts": "Contacts",
+    "address": "04214, Kyiv, Heroiv Dnipra str., 53 office 3",
+    "social": "Social networks"
+  }
 }
