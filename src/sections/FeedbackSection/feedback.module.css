@@ -1,26 +1,24 @@
 .box {
   background-image: url('/images/feedback/leafs-tablet.svg'),
-    url('/images/feedback/bg-tablet.png');
-  background-size: auto, cover;
+    url('/svg/puzzle.svg');
   background-color: #fbf9e9;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat, repeat;
   background-position: bottom left;
 }
 
 @media (min-width: 1280px) {
   .box {
     background-image: url('/images/feedback/leafs-desktop.svg'),
-      url('/images/feedback/bg-desktop.png');
-    background-size: auto, cover;
+      url('/svg/puzzle.svg');
     background-color: #fbf9e9;
-    background-repeat: no-repeat;
+    background-repeat: no-repeat, repeat;
     background-position: bottom left;
   }
 }
 
 @media (max-width: 768px) {
   .box {
-    background-image: url('/images/feedback/bg-tablet.png');
-    background-size: cover;
+    background-image: url('/svg/puzzle.svg');
+    background-repeat: repeat;
   }
 }

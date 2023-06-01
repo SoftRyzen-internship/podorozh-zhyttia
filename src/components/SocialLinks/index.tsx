@@ -1,58 +1,24 @@
-import React from 'react';
+import { FC } from 'react';
 import Link from 'next/link';
 
-import Telegram from 'public/svg/telegram.svg';
-import Instagram from 'public/svg/instagram.svg';
-import Facebook from 'public/svg/facebook.svg';
-import Youtube from 'public/svg/youtube.svg';
+import { SOCIAL_MEDIA } from './constants';
 
-const SocialLinks = () => {
+const SocialLinks: FC = () => {
   return (
     <ul className="flex gap-5">
-      <li>
-        <Link
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className=""
-          aria-label="Visit our instagram page"
-        >
-          <Instagram />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className=""
-          aria-label="Visit our telegram page"
-        >
-          <Telegram />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className=""
-          aria-label="Visit our facebook page"
-        >
-          <Facebook />
-        </Link>
-      </li>
-      <li>
-        <Link
-          href="#"
-          target="_blank"
-          rel="noopener noreferrer"
-          className=""
-          aria-label="Visit our youtube page"
-        >
-          <Youtube />
-        </Link>
-      </li>
+      {SOCIAL_MEDIA.map(({ label, icon: Icon, href }) => (
+        <li key={label}>
+          <Link
+            rel="noopener noreferrer"
+            aria-label={label}
+            href={href}
+            target="_blank"
+            className="group w-10 h-10 flex items-center justify-center rounded border border-black-midnight hover:border-accent focus:outline-none focus:border-accent hover:duration-300"
+          >
+            <Icon className="fill-black-midnight group-hover:fill-accent group-focus:fill-accent group-hover:duration-300" />
+          </Link>
+        </li>
+      ))}
     </ul>
   );
 };
