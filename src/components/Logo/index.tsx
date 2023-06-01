@@ -16,7 +16,7 @@ const Logo: FC<TypeLogoProps> = ({
   return (
     <LogoSvg
       // className={`hover:cursor-pointer w-[${width}px] tablet:w-[${tabletWidth}px] desktop:w-[${desktopWidth}px]`}
-      className="w-[150px]"
+      className="w-[100px]"
     />
   );
 };
