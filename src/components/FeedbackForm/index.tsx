@@ -23,17 +23,15 @@ const FeedbackForm: FC = () => {
 
   const onSubmit: SubmitHandler<TypeFormValues> = async data => {
     try {
+      const message = `Name: ${data.name}\nPhone: ${data.phone}\nCommentary: ${data.commentary}`;
       const response = await fetch(
         `https://api.telegram.org/bot${botToken}/sendMessage`,
         {
           method: 'POST',
           headers: {
-            'Content-Type': 'application/json',
+            'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: JSON.stringify({
-            chat_id: groupId,
-            text: JSON.stringify(data),
-          }),
+          body: `chat_id=${groupId}&text=${encodeURIComponent(message)}`,
         }
       );
 

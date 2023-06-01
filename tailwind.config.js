@@ -7,6 +7,7 @@ module.exports = {
   ],
   theme: {
     screens: {
+      small: '360px',
       mobile: '480px',
       tablet: '768px',
       desktop: '1280px',
@@ -70,6 +71,7 @@ module.exports = {
     },
     backgroundImage: {
       circle: "url('/svg/puzzle.svg')",
+      docs: "url('/svg/l_docs.svg'),url('/svg/r_docs.svg'),url('/svg/puzzle.svg')",
     },
   },
 
