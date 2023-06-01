@@ -1,4 +1,4 @@
-import { NextPage } from 'next';
+import { FC } from 'react';
 import Image from 'next/image';
 
 import SwiperCore, { Navigation } from 'swiper';
@@ -6,15 +6,18 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import userArray from './api';
-import { SliderType } from './types';
+import { TypePsychologist } from '@/types';
 
 import PrevArrow from 'public/svg/arrowPrev.svg';
 import NextArrow from 'public/svg/arrowNext.svg';
 
 SwiperCore.use([Navigation]);
 
-const Slider: NextPage = () => {
+interface SliderProps {
+  allPsychologists: TypePsychologist[];
+}
+
+const Slider: FC<SliderProps> = ({ allPsychologists }) => {
   return (
     <>
       <div className="relative">
@@ -37,32 +40,40 @@ const Slider: NextPage = () => {
             },
           }}
         >
-          {userArray.map(({ id, to, name, description }: SliderType) => (
-            <SwiperSlide key={id}>
-              <div className="flex flex-col items-center">
-                <div className="w-[320px] tablet:w-[336px] desktop:w-[384px]">
-                  <div className="relative w-[320px] h-[350px] tablet:w-[336px] tablet:h-[350px] desktop:w-[384px] desktop:h-[400px]">
-                    <Image
-                      className="w-full h-full object-contain absolute top-0 left-0"
-                      src={`/images/slider/${to}.jpg`}
-                      alt={name}
-                      fill={true}
-                    />
-                  </div>
-                  <div className="flex flex-col items-center py-7 px-5 tablet:px-7 desktop:px-7">
-                    <p className="font-semibold text-lg text-black-charcoal">
-                      {name}
-                    </p>
-                    <p className="mt-5 font-normal text-base text-black-charcoal">
-                      {description}
-                    </p>
+          {allPsychologists?.map(
+            ({
+              id,
+              name,
+              description,
+              psychologistPhoto,
+            }: TypePsychologist) => (
+              <SwiperSlide key={id}>
+                <div className="flex flex-col items-center">
+                  <div className="w-full tablet:w-[336px] desktop:w-[384px]">
+                    <div className="relative w-full h-[350px] tablet:w-[336px] tablet:h-[350px] desktop:w-[384px] desktop:h-[400px]">
+                      <Image
+                        className="w-full h-full object-cover object-top absolute top-0 left-0"
+                        src={psychologistPhoto.url}
+                        alt={name}
+                        fill={true}
+                      />
+                    </div>
+
+                    <div className=" h-[180px] flex flex-col items-center py-7 px-5 tablet:px-7 desktop:px-7 bg-white">
+                      <p className="font-semibold text-lg text-black-charcoal">
+                        {name}
+                      </p>
+                      <p className="mt-5 font-normal text-base text-black-charcoal">
+                        {description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-          ))}
+              </SwiperSlide>
+            )
+          )}
         </Swiper>
-        <div className="w-[120px] flex items-center mt-8 m-auto tablet:absolute tablet:mt-0 tablet:top-[-40px] tablet:right-0 desktop:absolute desktop:mt-0 desktop:top-[-48px] desktop:right-0">
+        <div className="w-[120px] flex items-center mt-8 m-auto tablet:absolute tablet:mt-0 tablet:top-[-70px] tablet:right-0 desktop:absolute desktop:mt-0 desktop:top-[-80px] desktop:right-0">
           <button
             type="button"
             aria-label="prev"
