@@ -1,8 +1,10 @@
 import { FC } from 'react';
+import { useTranslation } from 'next-i18next';
 
 import s from './Tabs.module.css';
 
 const SwiftTab: FC = () => {
+  const { t } = useTranslation();
   return (
     <article className="desktop:flex desktop:gap-24 py-7 px-5 tablet:py-11 tablet:px-8 desktop:p-[60px] text-black-charcoal bg-white-light shadow-payment">
       <div className="mb-[82px] tablet:mb-[60px] desktop:mb-0">
@@ -11,7 +13,7 @@ const SwiftTab: FC = () => {
         </h3>
 
         <h4 className={s.title}>Company name:</h4>
-        <p className={s.text}>БО БФ ПОДОРОЖ ЖИТТЯ</p>
+        <p className={s.text}>{t('donate.company')}</p>
 
         <h4 className={s.title}>IBANCode:</h4>
         <p className={s.text}>UA523052990000026000035028102</p>
@@ -25,9 +27,7 @@ const SwiftTab: FC = () => {
         <p className={s.text}>PBANUA2X </p>
 
         <h4 className={s.title}>Company address:</h4>
-        <p className={`${s.text} ${s.itemGap}`}>
-          UA 04214 м Київ вул Героїв Днiпра б.53 кв.3
-        </p>
+        <p className={`${s.text} ${s.itemGap}`}>{t('donate.address')}</p>
 
         <h4 className={s.title}>Account in the correspondent bank</h4>
         <p className={s.text}>400886700401</p>
@@ -47,7 +47,7 @@ const SwiftTab: FC = () => {
         </h3>
 
         <h4 className={s.title}>Company name:</h4>
-        <p className={s.text}>БО БФ ПОДОРОЖ ЖИТТЯ</p>
+        <p className={s.text}>{t('donate.company')}</p>
 
         <h4 className={s.title}>IBANCode:</h4>
         <p className={s.text}>UA173052990000026002045025193</p>
@@ -61,9 +61,7 @@ const SwiftTab: FC = () => {
         <p className={s.text}>PBANUA2X </p>
 
         <h4 className={s.title}>Company address:</h4>
-        <p className={`${s.text} ${s.itemGap}`}>
-          UA 04214 м Київ вул Героїв Днiпра б.53 кв.3
-        </p>
+        <p className={`${s.text} ${s.itemGap}`}>{t('donate.address')}</p>
 
         <h4 className={s.title}>Account in the correspondent bank</h4>
         <p className={s.text}>001-1-000080</p>

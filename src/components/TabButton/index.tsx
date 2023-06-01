@@ -10,9 +10,9 @@ const TabButton: FC<ITabButtonProps> = ({ children }) => {
         <button
           className={`${
             selected
-              ? 'bg-accent text-white'
-              : ' bg-white text-accent border border-accent hover:text-accent-dark focus:text-accent-dark hover:border-accent-dark focus:border-accent-dark'
-          } w-full tablet:w-[336px] desktop:w-[280px] h-[48px] text-sm tablet:text-lg font-semibold leading-7 rounded focus:outline-none`}
+              ? 'bg-accent text-white hover:bg-accent-dark focus:bg-accent-dark'
+              : ' bg-white text-accent border border-accent hover:text-white focus:text-white hover:bg-accent focus:bg-accent'
+          } w-full tablet:w-[336px] desktop:w-[280px] h-[48px] text-sm tablet:text-lg font-semibold leading-7 rounded focus:outline-none transition-colors`}
         >
           {children}
         </button>
