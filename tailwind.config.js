@@ -20,6 +20,11 @@ module.exports = {
       },
     },
 
+    fontFamily: {
+      comfortaa: ['Comfortaa', 'cursive'],
+      roboto: ['Roboto', 'sans-serif'],
+    },
+
     colors: {
       accent: {
         DEFAULT: '#E34D80',
@@ -34,12 +39,16 @@ module.exports = {
         charcoal: '#222222',
         midnight: '#010101',
       },
+      red: {
+        DEFAULT: '#FF0B0B',
+      },
       white: {
         DEFAULT: '#FFFFFF',
       },
     },
 
     fontSize: {
+      tiny: '12px',
       xs: '14px',
       base: '16px',
       sm: '18px',
