@@ -1,0 +1,26 @@
+.box {
+  background-image: url('/images/feedback/leafs-tablet.svg'),
+    url('/images/feedback/bg-tablet.png');
+  background-size: auto, cover;
+  background-color: #fbf9e9;
+  background-repeat: no-repeat;
+  background-position: bottom left;
+}
+
+@media (min-width: 1280px) {
+  .box {
+    background-image: url('/images/feedback/leafs-desktop.svg'),
+      url('/images/feedback/bg-desktop.png');
+    background-size: auto, cover;
+    background-color: #fbf9e9;
+    background-repeat: no-repeat;
+    background-position: bottom left;
+  }
+}
+
+@media (max-width: 768px) {
+  .box {
+    background-image: url('/images/feedback/bg-tablet.png');
+    background-size: cover;
+  }
+}
