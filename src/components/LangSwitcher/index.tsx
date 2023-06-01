@@ -1,15 +1,19 @@
+import { FC } from 'react';
 import { useRouter } from 'next/router';
 
-const LangSwitcher = () => {
+import { ILangSwitcherProps } from './types';
+
+const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
   const router = useRouter();
   const { locale } = router;
+  const classes = `flex gap-6 text-base font-semibold ${className}`;
 
   const handleLangChange = (newLocale: string) => {
     router.push(router.pathname, router.asPath, { locale: newLocale });
   };
 
   return (
-    <ul className="flex gap-6 text-base font-semibold">
+    <ul className={classes}>
       <li>
         <button
           onClick={() => handleLangChange('uk')}

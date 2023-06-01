@@ -57,8 +57,9 @@
   "book": {
     "title": "How are you?",
     "subtitle": "Books for psychological support to each other",
-    "description": "Books for military and civilians, that help to learn how to give psychological support to each other during the war. Because of the war, there are a lot of people with the trauma experience and there are not enough psychologists. That’s why each of us can be a psychologist a little bit for those who need support or help.",
-    "author": "Anton Semenov, psychologist"
+    "description": "<1>Books for military and civilians, that help to learn how to give psychological support to each other during the war.</1><2> Because of the war, there are a lot of people with the trauma experience and there are not enough psychologists. That’s why each of us can be a psychologist a little bit for those who need support or help.</2>",
+    "author": "Anton Semenov, psychologist",
+    "alt": "The book \"How are you Bro?\""
   },
   "report": {
     "title": "Reports",

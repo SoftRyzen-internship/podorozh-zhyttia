@@ -11,6 +11,8 @@ module.exports = {
       mobile: '480px',
       tablet: '768px',
       desktop: '1280px',
+      onlyMobile: { max: '767.8px' },
+      onlyTablet: { min: '768px', max: '1279.8px' },
     },
 
     container: {
@@ -66,6 +68,9 @@ module.exports = {
       '3xl': '32px',
       '4xl': '40px',
       '5xl': '52px',
+    },
+    backgroundImage: {
+      circle: "url('/svg/puzzle.svg')",
     },
   },
 
