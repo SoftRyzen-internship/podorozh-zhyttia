@@ -10,6 +10,8 @@ import SubmitButton from '@/components/SubmitButton';
 
 import { TypeFormValues } from './types';
 
+import { botToken, groupId } from '@/components/TelegramBot';
+
 const FeedbackForm: FC = () => {
   const { t } = useTranslation();
   const {
@@ -20,8 +22,30 @@ const FeedbackForm: FC = () => {
   } = useForm<TypeFormValues>();
 
   const onSubmit: SubmitHandler<TypeFormValues> = async data => {
-    console.log(data);
-    reset();
+    try {
+      const response = await fetch(
+        `https://api.telegram.org/bot${botToken}/sendMessage`,
+        {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({
+            chat_id: groupId,
+            text: JSON.stringify(data),
+          }),
+        }
+      );
+
+      const responseData = await response.json();
+
+      console.log('Повідомлення успішно відправлено');
+      console.log(responseData);
+
+      reset();
+    } catch (error) {
+      console.error('Помилка під час відправки повідомлення', error);
+    }
   };
 
   return (
