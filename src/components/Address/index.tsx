@@ -30,7 +30,7 @@ const Address: FC = () => {
             </Link>
           </li>
           <li>
-            <p>{t('footer.address')}</p>
+            <p className="max-w-[240px]">{t('footer.address')}</p>
           </li>
         </ul>
       </address>

@@ -4,22 +4,21 @@ import { useTranslation } from 'next-i18next';
 
 import SocialLinks from '@/components/SocialLinks';
 import Address from '@/components/Address';
-
-import Logo from 'public/svg/logo.svg';
+import Logo from '@/components/Logo';
 
 const Footer: FC = () => {
   const { t } = useTranslation();
 
   return (
     <footer className="pt-10 pb-5 tablet:py-[60px]">
-      <div className="relative container text-center onlyTablet:text-left flex flex-col justify-between items-center onlyTablet:flex-wrap tablet:flex-row onlyTablet:items-end desktop:items-start">
-        <div className="onlyTablet:absolute onlyTablet:top-0 onlyTablet:left-8">
-          <Logo />
+      <div className="relative container text-center tablet:text-left flex flex-col justify-between items-center onlyTablet:flex-wrap tablet:flex-row onlyTablet:items-end desktop:items-start desktop:gap-[32px]">
+        <div className="desktop:w-1/3 onlyTablet:absolute onlyTablet:top-0 onlyTablet:left-8">
+          <Logo width={100} tabletWidth={200} desktopWidth={200} />
         </div>
-        <div className="mt-10 tablet:mt-0 onlyTablet:order-1">
+        <div className="desktop:w-1/3 mt-10 tablet:mt-0 onlyTablet:order-1">
           <Address />
         </div>
-        <div className="mt-10 desktop:mt-0">
+        <div className="mt-10 desktop:w-1/3 desktop:mt-0 desktop:pl-[104px]">
           <h3 className="text-lg text-accent font-bold leading-7 mb-7">
             {t('footer.social')}
           </h3>

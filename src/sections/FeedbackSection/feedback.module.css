@@ -1,24 +1,5 @@
 .box {
-  background-image: url('/images/feedback/leafs-tablet.svg'),
-    url('/svg/puzzle.svg');
-  background-color: #fbf9e9;
-  background-repeat: no-repeat, repeat;
-  background-position: bottom left;
-}
-
-@media (min-width: 1280px) {
-  .box {
-    background-image: url('/images/feedback/leafs-desktop.svg'),
-      url('/svg/puzzle.svg');
-    background-color: #fbf9e9;
+  @media (min-width: 768px) {
     background-repeat: no-repeat, repeat;
-    background-position: bottom left;
-  }
-}
-
-@media (max-width: 768px) {
-  .box {
-    background-image: url('/svg/puzzle.svg');
-    background-repeat: repeat;
   }
 }
