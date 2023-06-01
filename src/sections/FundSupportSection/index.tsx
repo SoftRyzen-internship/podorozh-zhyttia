@@ -21,7 +21,9 @@ const FundSupportSection: FC = () => {
               {t('support.description')}
             </p>
           </div>
-          <LinkButton href="/">{t('btn.support')}</LinkButton>
+          <LinkButton href="https://next.privat24.ua/payments/form/%7B%22token%22%3A%2287accea8-7d2c-48d5-a308-174fa1becc56%22%7D">
+            {t('btn.support')}
+          </LinkButton>
         </div>
       </div>
     </section>

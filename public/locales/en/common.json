@@ -23,7 +23,15 @@
     "title": "Donate",
     "private24": "Private24",
     "card": "Card:",
-    "link": "Link to online transfer"
+    "link": "Link to online transfer",
+    "box": "box",
+    "company": "CF PODOROZH ZHYTTIA",
+    "address": "UA 04214, Kyiv, 53, Heroiv Dnipra Str. office 3",
+    "copied": "Copied",
+    "aria-copy": "Copy to clipboard",
+    "aria-copiedCard": "The card number has been copied",
+    "aria-copiedBox": "The box has been copied",
+    "aria-goTo": "Go to the transfer page"
   },
   "support": {
     "title": "Donate",
