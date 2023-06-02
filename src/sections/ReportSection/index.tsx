@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Trans, useTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next';
 import Heading from '@/components/Heading';
 import LinkButton from '@/components/LinkButton';
 
@@ -10,6 +10,7 @@ const ReportSection: FC = () => {
 
   return (
     <section
+      id="#reports"
       className={`onlyMobile:bg-circle onlyMobile:bg-repeat tablet:bg-docs tablet:bg-[position:left_bottom,right_top,left_top] tablet:bg-[size:243px,226px,72px] desktop:bg-[size:370px,390px,72px] ${styles.bgRepeating}`}
     >
       <div className="container flex flex-col items-center py-10 text-center tablet:text-2xl desktop:text-4xl tablet:py-20 desktop:py-[100px]">

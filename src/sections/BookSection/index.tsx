@@ -9,7 +9,7 @@ const BookSection: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section>
+    <section id='#books'>
       <div className="container py-10 tablet:py-20 desktop:py-[100px] text-black-charcoal">
         <div className="desktop:grid desktop:grid-cols-2 desktop:gap-8">
           <div>
