@@ -9,14 +9,14 @@ const BookSection: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section>
+    <section id='#books'>
       <div className="container py-10 tablet:py-20 desktop:py-[100px] text-black-charcoal">
         <div className="desktop:grid desktop:grid-cols-2 desktop:gap-8">
           <div>
             <div className="text-4xl">
               <Heading weight="bold">{t('book.title')}</Heading>
             </div>
-            <h3 className="text-lg font-bold mt-8">{t('book.subtitle')}</h3>
+            <h3 className="mt-8 text-lg font-bold">{t('book.subtitle')}</h3>
             <div className="mt-8 onlyTablet:grid onlyTablet:grid-cols-2 onlyTablet:gap-8">
               <div className="desktop:w-[487px]">
                 <Trans
@@ -25,7 +25,7 @@ const BookSection: FC = () => {
                 >
                   {t('book.description')}
                 </Trans>
-                <p className="font-bold mt-8 desktop:mt-10">
+                <p className="mt-8 font-bold desktop:mt-10">
                   {t('book.author')}
                 </p>
                 <div className="mt-10">
@@ -46,7 +46,7 @@ const BookSection: FC = () => {
           </div>
           <div className="hidden desktop:block">
             <Image
-              className="rounded object-cover"
+              className="object-cover rounded"
               loading="lazy"
               src="/images/book/book_d@2.jpg"
               width="593"

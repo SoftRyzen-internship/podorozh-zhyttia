@@ -15,7 +15,7 @@ const FeedbackFormInput: FC<IInputFieldProps> = ({
         <input
           className={`border ${
             !error ? 'border-accent' : 'border-red'
-          } rounded-sm w-full py-3 px-2.5 tablet:px-3 text-black-charcoal text-base placeholder:text-black-charcoal placeholder:text-base bg-yellow h-12`}
+          } rounded-sm w-full py-3 px-2.5 tablet:px-3 text-black-charcoal text-base placeholder:text-black-charcoal placeholder:text-base bg-yellow h-12 focus:outline-none focus:border-[3px]`}
           id={id}
           type="text"
           placeholder={placeholder}
