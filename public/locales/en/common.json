@@ -11,6 +11,7 @@
     "talk": "Talk to psychologist",
     "support": "Support",
     "submit": "Submit",
+    "sending": "Sending...",
     "more": "Read more",
     "report": "See reporting"
   },
@@ -50,7 +51,8 @@
     "comment": "Comment",
     "error": {
       "name": "*Check that the data is entered correctly",
-      "phone": "*Incorrect number format"
+      "phone": "*Incorrect number format",
+      "message": "Error while sending the message."
     },
     "success": "Your message has been sent successfully"
   },

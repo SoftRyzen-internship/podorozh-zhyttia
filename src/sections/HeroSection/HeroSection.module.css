@@ -9,6 +9,7 @@
 
 @media (min-width: 1280px) {
   .background {
+    background-size: 665px;
     background-image: url('/images/hero/hero-bg-desktop.png');
   }
 }
