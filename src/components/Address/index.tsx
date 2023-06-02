@@ -2,12 +2,13 @@ import { FC } from 'react';
 import Link from 'next/link';
 
 import { useTranslation } from 'next-i18next';
+import { typeAddressProps } from './types';
 
-const Address: FC = () => {
+const Address: FC<typeAddressProps> = ({ className }) => {
   const { t } = useTranslation();
 
   return (
-    <div>
+    <div className={`${className}`}>
       <h3 className="text-lg text-accent font-bold leading-7 mb-7">
         {t('footer.contacts')}
       </h3>

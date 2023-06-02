@@ -9,7 +9,10 @@ import BunnerApi from './api';
 const GallerySection: FC = () => {
   const { t } = useTranslation();
   return (
-    <section id="#gallery" className="py-10 border-b-[1px] border-b-accent">
+    <section
+      id="#gallery"
+      className="py-10 tablet:py-20 desktop:py-[100px] border-b-[1px] border-b-accent"
+    >
       <div className="container">
         <div className="flex justify-center tablet:justify-start desktop:justify-start">
           <Heading>{t('gallery')}</Heading>

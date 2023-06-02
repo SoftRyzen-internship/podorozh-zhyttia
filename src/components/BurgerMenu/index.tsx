@@ -9,7 +9,7 @@ import { navLinks } from '@/constants/navLinks/navLinks';
 const BurgerMenu: FC = () => {
   const { t } = useTranslation();
   return (
-    <div className="bg-yellow z-10 absolute right-0 w-full h-screen tablet:w-1/2 tablet:h-[521px] desktop:hidden">
+    <div className="bg-yellow z-50 absolute right-0 w-full h-screen tablet:w-1/2 tablet:h-[521px] desktop:hidden">
       <div className="container">
         <div className="px-5 pt-10 tablet:max-w-[340px]">
           <ul>

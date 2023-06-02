@@ -1,18 +1,22 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 
 import { useTranslation } from 'next-i18next';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
 
-import FeedbackFormInput from '@/components/FeedbackInput';
-import FeedbackFormTextarea from '@/components/FeedbackTextarea';
-import SubmitButton from '@/components/SubmitButton';
-
-import { TypeFormValues } from './types';
+import toast, { Toaster } from 'react-hot-toast';
 
 import { botToken, groupId } from '@/components/TelegramBot';
 
+import FeedbackFormInput from '@/components/FeedbackInput';
+import FeedbackFormTextarea from '@/components/FeedbackTextarea';
+import SubmitButton from '@/components/SubmitButton';
+import Loader from '@/components/Loader';
+
+import { TypeFormValues } from './types';
+
 const FeedbackForm: FC = () => {
+  const [isSending, setIsSending] = useState(false);
   const { t } = useTranslation();
   const {
     register,
@@ -22,7 +26,12 @@ const FeedbackForm: FC = () => {
   } = useForm<TypeFormValues>();
 
   const onSubmit: SubmitHandler<TypeFormValues> = async data => {
+    if (isSending) {
+      return;
+    }
+
     try {
+      setIsSending(true);
       const message = `Name: ${data.name}\nPhone: ${data.phone}\nCommentary: ${data.commentary}`;
       const response = await fetch(
         `https://api.telegram.org/bot${botToken}/sendMessage`,
@@ -37,12 +46,11 @@ const FeedbackForm: FC = () => {
 
       const responseData = await response.json();
 
-      console.log('Повідомлення успішно відправлено');
-      console.log(responseData);
-
       reset();
     } catch (error) {
-      console.error('Помилка під час відправки повідомлення', error);
+      toast.error(() => t('form.error.message'));
+    } finally {
+      setIsSending(false);
     }
   };
 
@@ -82,21 +90,21 @@ const FeedbackForm: FC = () => {
         label="Commentary"
         id="inline-commentary"
         placeholder={t('form.comment')}
-        register={register(
-          'commentary'
-          //Запитати - чи е обов'язкове це поле?
-          // {
-          //   required: "*Це поле є обов'язковим",
-          //   minLength: {
-          //     value: 5,
-          //     message: 'Мінімальна довжина 5 символів',
-          //   },
-          // }
-        )}
+        register={register('commentary')}
         error={errors?.commentary?.message}
         rows={6}
       />
-      <SubmitButton>{t('btn.submit')}</SubmitButton>
+      <SubmitButton isDisabled={isSending}>
+        {isSending ? (
+          <>
+            <Loader className="mr-2" />
+            {t('btn.sending')}
+          </>
+        ) : (
+          t('btn.submit')
+        )}
+      </SubmitButton>
+      <Toaster position="top-right" reverseOrder={false} />
     </form>
   );
 };
