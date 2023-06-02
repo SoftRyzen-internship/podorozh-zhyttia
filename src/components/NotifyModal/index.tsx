@@ -13,10 +13,11 @@ const NotifyModal: FC<IModalProps> = ({ setIsModalOpen }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(false);
+      setIsModalOpen(false);
     }, 2000);
 
     return () => clearTimeout(timer);
-  }, [isOpen]);
+  }, [isOpen, setIsModalOpen]);
 
   const closeModal = () => {
     setIsOpen(false);
