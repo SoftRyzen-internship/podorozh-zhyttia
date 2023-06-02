@@ -29,7 +29,7 @@ const Home: FC<TypeHomeProps> = ({ data }) => {
 
   return (
     <>
-      <HeroSection />
+      <HeroSection allBanners={allBanners} />
       <MentalSupportSection allPsychologists={allPsychologists} />
       <DonateSection />
       <FundSupportSection />
