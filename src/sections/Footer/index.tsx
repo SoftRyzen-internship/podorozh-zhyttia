@@ -10,16 +10,16 @@ const Footer: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="pt-10 pb-5 tablet:py-[60px]">
-      <div className="relative container text-center tablet:text-left flex flex-col justify-between items-center onlyTablet:flex-wrap tablet:flex-row onlyTablet:items-end desktop:items-start desktop:gap-8">
+    <footer id="#contacts" className="pt-10 pb-5 tablet:py-[60px]">
+      <div className="container relative flex flex-col items-center justify-between text-center tablet:text-left onlyTablet:flex-wrap tablet:flex-row onlyTablet:items-end desktop:items-start desktop:gap-8">
         <div className="desktop:w-1/3 onlyTablet:absolute onlyTablet:top-0 onlyTablet:left-8">
-          <Logo width={100} tabletWidth={200} desktopWidth={200} />
+          <Logo className="w-[100px] h-[65px] desktop:w-[154px] desktop:h-[100px]" />
         </div>
-        <div className="tablet:w-1/2 tablet:pl-4 tablet:mt-0 desktop:w-1/3 mt-10 onlyTablet:order-1">
+        <div className="mt-10 tablet:w-1/2 tablet:pl-4 tablet:mt-0 desktop:w-1/3 onlyTablet:order-1">
           <Address />
         </div>
         <div className="mt-10 desktop:w-1/3 desktop:mt-0 desktop:pl-[104px]">
-          <h3 className="text-lg text-accent font-bold leading-7 mb-7">
+          <h3 className="text-lg font-bold leading-7 text-accent mb-7">
             {t('footer.social')}
           </h3>
           <SocialLinks />

@@ -33,10 +33,7 @@ const Header: FC = () => {
       className="fixed top-0 left-0 right-0 z-10 bg-white"
     >
       <div className="container flex items-center py-[7px] tablet:py-1">
-        {/* <div className="w-[77px] h-[50px] tablet:w-[111px] tablet:h-[72px] outline-dotted">
-          LOGO
-        </div> */}
-        <Logo width={77} height={50} tabletWidth={111} tabletHeight={72} />
+        <Logo className="w-[77px] h-[50px] tablet:w-[111px] tablet:h-[77px]" />
         <NavBar
           className="hidden desktop:block desktop:ml-auto"
           offset={offset}
