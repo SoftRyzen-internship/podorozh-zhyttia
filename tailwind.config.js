@@ -77,6 +77,7 @@ module.exports = {
         "url('/images/feedback/leafs-tablet.svg'),url('/svg/puzzle.svg')",
       leafsDesktop:
         "url('/images/feedback/leafs-desktop.svg'),url('/svg/puzzle.svg')",
+      modal: "url('/svg/modal-bg.svg')",
     },
   },
 
