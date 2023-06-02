@@ -17,9 +17,9 @@ const HeroSection: FC<IHeroProps> = ({ allBanners }) => {
       id="#hero"
       className="onlyMobile:pb-10 onlyMobile:pt-16 tablet:pt-20 text-black-charcoal bg-yellow"
     >
-      <div className="container tablet:flex tablet:pr-0">
+      <div className="container tablet:flex tablet:px-0">
         <div
-          className={`${s.background} tablet:w-[400px] desktop:w-[656px] onlyTablet:pr-[31px] tablet:pt-[60px] desktop:pt-[80px]`}
+          className={`${s.background} tablet:pl-8 tablet:w-[400px] desktop:w-[656px] onlyTablet:pr-[31px] tablet:pt-[60px] desktop:pt-[80px]`}
         >
           <h1 className="onlyMobile:max-w-[400px] text-[23px] small:text-[26px] tablet:text-2xl desktop:text-5xl leading-10 tablet:leading-[48px] desktop:leading-[68px] font-bold mb-10 tablet:mb-8 desktop:mb-10">
             {t('hero.title')}
@@ -35,6 +35,7 @@ const HeroSection: FC<IHeroProps> = ({ allBanners }) => {
             alt={photo.alt}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
+            className="object-cover"
           />
         </div>
       </div>
