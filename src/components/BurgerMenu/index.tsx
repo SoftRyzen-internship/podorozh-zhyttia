@@ -1,33 +1,18 @@
 import { FC } from 'react';
-import { useState } from 'react';
+
 import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
-
-import Logo from '/public/svg/logo.svg';
-import Exit from '/public/svg/exit.svg';
-import Burger from '/public/svg/burger.svg';
 
 import { TypeNavigationLink } from '../../constants/navLinks/types';
 import { navLinks } from '@/constants/navLinks/navLinks';
 
 const BurgerMenu: FC = () => {
   const { t } = useTranslation();
-  const [closeModal, setCloseModal] = useState<boolean>(false);
-  const handleCloseModal = () => {
-    setCloseModal(!closeModal);
-  };
-
   return (
-    <div className="m-auto w-full h-screen tablet:w-1/2 tablet:h-[452px] desktop:hidden">
-      <div className="flex items-center justify-between h-16 px-5 bg-white">
-        <Logo />
-        <button onClick={handleCloseModal} aria-label="exit" type="button">
-          {closeModal ? <Exit /> : <Burger />}
-        </button>
-      </div>
-      {closeModal && (
-        <div className="h-full px-5 pt-10 bg-yellow">
-          <ul className="">
+    <div className="bg-yellow z-10 absolute right-0 w-full h-screen tablet:w-1/2 tablet:h-[521px] desktop:hidden">
+      <div className="container">
+        <div className="px-5 pt-10 tablet:max-w-[340px]">
+          <ul>
             {navLinks.map(({ to, title }: TypeNavigationLink) => (
               <li
                 key={title}
@@ -38,7 +23,7 @@ const BurgerMenu: FC = () => {
             ))}
           </ul>
         </div>
-      )}
+      </div>
     </div>
   );
 };
