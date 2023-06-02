@@ -4,12 +4,14 @@ import { useTranslation } from 'next-i18next';
 
 import { useForm, SubmitHandler } from 'react-hook-form';
 
+import toast, { Toaster } from 'react-hot-toast';
+
+import { botToken, groupId } from '@/components/TelegramBot';
+
 import FeedbackFormInput from '@/components/FeedbackInput';
 import FeedbackFormTextarea from '@/components/FeedbackTextarea';
 import SubmitButton from '@/components/SubmitButton';
 import Loader from '@/components/Loader';
-
-import { botToken, groupId } from '@/components/TelegramBot';
 
 import { TypeFormValues } from './types';
 
@@ -44,12 +46,9 @@ const FeedbackForm: FC = () => {
 
       const responseData = await response.json();
 
-      console.log('Повідомлення успішно відправлено');
-      console.log(responseData);
-
       reset();
     } catch (error) {
-      console.error('Помилка під час відправки повідомлення', error);
+      toast.error(() => t('form.error.message'));
     } finally {
       setIsSending(false);
     }
@@ -105,6 +104,7 @@ const FeedbackForm: FC = () => {
           t('btn.submit')
         )}
       </SubmitButton>
+      <Toaster position="top-right" reverseOrder={false} />
     </form>
   );
 };
