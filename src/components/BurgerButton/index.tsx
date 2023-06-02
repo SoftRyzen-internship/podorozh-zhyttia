@@ -3,10 +3,7 @@ import { FC } from 'react';
 import Burger from '/public/svg/burger.svg';
 import Exit from '/public/svg/exit.svg';
 
-interface IBurgerButton {
-  handleCloseModal: () => void;
-  closeModal: boolean;
-}
+import { IBurgerButton } from './interfaces';
 
 const BurgerButton: FC<IBurgerButton> = ({ handleCloseModal, closeModal }) => {
   return (

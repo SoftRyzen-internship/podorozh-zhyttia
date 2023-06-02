@@ -40,7 +40,7 @@ const Header: FC = () => {
       ref={headerRef}
       className="fixed top-0 left-0 right-0 z-10 bg-white"
     >
-      <div className="container flex items-center justify-between py-[7px] tablet:py-1">
+      <div className="container flex items-center justify-between py-[7px] tablet:py-[1.5px]">
         <Logo className="w-[77px] h-[50px] tablet:w-[111px] tablet:h-[77px]" />
 
         <NavBar
@@ -55,7 +55,7 @@ const Header: FC = () => {
           closeModal={closeModal}
         />
       </div>
-      {closeModal && <BurgerMenu />}
+      {closeModal && <BurgerMenu handleCloseModal={handleCloseModal} />}
     </header>
   );
 };

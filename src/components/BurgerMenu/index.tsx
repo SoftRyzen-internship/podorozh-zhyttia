@@ -1,12 +1,14 @@
 import { FC } from 'react';
 
-import Link from 'next/link';
+import { Link } from 'react-scroll';
 import { useTranslation } from 'next-i18next';
 
 import { TypeNavigationLink } from '../../constants/navLinks/types';
 import { navLinks } from '@/constants/navLinks/navLinks';
 
-const BurgerMenu: FC = () => {
+import { TypeBurgerMenuProps } from './type';
+
+const BurgerMenu: FC<TypeBurgerMenuProps> = ({ handleCloseModal }) => {
   const { t } = useTranslation();
   return (
     <div className="bg-yellow z-50 absolute right-0 w-full h-screen tablet:w-1/2 tablet:h-[521px] desktop:hidden">
@@ -18,7 +20,15 @@ const BurgerMenu: FC = () => {
                 key={title}
                 className="mt-5 pb-2 border-b-[1px] border-b-accent text-lg text-black-charcoal hover:text-accent"
               >
-                <Link href={to}>{t(title)}</Link>
+                <Link
+                  to={to}
+                  smooth={true}
+                  spy={true}
+                  duration={500}
+                  onClick={handleCloseModal}
+                >
+                  {t(title)}
+                </Link>
               </li>
             ))}
           </ul>
