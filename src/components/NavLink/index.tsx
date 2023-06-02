@@ -12,7 +12,7 @@ const NavLink: FC<NavLinkProps> = ({ path, children, offset = 0 }) => {
       spy={true}
       duration={500}
       offset={offset}
-      className="block text-lg desktop:text-base font-normal leading-7 desktop:leading-normal text-black-charcoal hover:text-accent focus:text-accent focus:outline-none transition-colors cursor-pointer"
+      className="block text-lg font-normal leading-7 transition-colors cursor-pointer desktop:text-base desktop:leading-normal text-black-charcoal hover:text-accent focus:text-accent focus:outline-none"
     >
       {children}
     </Link>
