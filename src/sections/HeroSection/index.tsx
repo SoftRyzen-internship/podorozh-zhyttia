@@ -19,7 +19,7 @@ const HeroSection: FC<IHeroProps> = ({ allBanners }) => {
     >
       <div className="container tablet:flex tablet:px-0">
         <div
-          className={`${s.background} tablet:w-[50%] onlyTablet:pr-[31px] tablet:pt-[60px] desktop:pt-[80px]`}
+          className={`${s.background} tablet:pl-8 tablet:w-[400px] desktop:w-[665px] onlyTablet:pr-[31px] tablet:pt-[60px] desktop:pt-[80px]`}
         >
           <h1 className="onlyMobile:max-w-[400px] text-[23px] small:text-[26px] tablet:text-2xl desktop:text-5xl leading-10 tablet:leading-[48px] desktop:leading-[68px] font-bold mb-10 tablet:mb-8 desktop:mb-10">
             {t('hero.title')}
@@ -29,7 +29,7 @@ const HeroSection: FC<IHeroProps> = ({ allBanners }) => {
           </p>
           <ScrollLink path="donate">{t('btn.donate')}</ScrollLink>
         </div>
-        <div className="relative small:w-[320px] h-[369px] mobile:w-[440px] mobile:h-[489px] tablet:w-[50%] tablet:h-[521px] desktop:h-[718px] onlyMobile:mt-10">
+        <div className="relative small:w-[320px] h-[369px] mobile:w-[440px] mobile:h-[489px] tablet:w-[368px] tablet:h-[521px] desktop:h-[718px] onlyMobile:mt-10 desktop:w-[624px]">
           <Image
             src={photo.url}
             alt={photo.alt}
