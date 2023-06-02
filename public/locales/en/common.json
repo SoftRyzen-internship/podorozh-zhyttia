@@ -22,7 +22,7 @@
   "psyhological_help": "Psychological help",
   "donate": {
     "title": "Donate",
-    "private24": "Private24",
+    "private24": "Privat24",
     "card": "Card:",
     "link": "Link to online transfer",
     "box": "box",
@@ -75,6 +75,6 @@
   },
   "modal": {
     "modal-text": "Your message has been sent successfully",
-    "aria-close": "Close the modal window" 
+    "aria-close": "Close the modal window"
   }
 }
