@@ -2,9 +2,11 @@ import { FC, Fragment, useState, useEffect } from 'react';
 import { Dialog, Transition } from '@headlessui/react';
 import { useTranslation } from 'next-i18next';
 
+import { IModalProps } from './types';
+
 import Close from 'public/svg/close.svg';
 
-const NotifyModal: FC = () => {
+const NotifyModal: FC<IModalProps> = ({ setIsModalOpen }) => {
   let [isOpen, setIsOpen] = useState(true);
   const { t } = useTranslation();
 
@@ -18,6 +20,7 @@ const NotifyModal: FC = () => {
 
   const closeModal = () => {
     setIsOpen(false);
+    setIsModalOpen(false);
   };
 
   return (

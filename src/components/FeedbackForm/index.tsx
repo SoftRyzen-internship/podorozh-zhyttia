@@ -12,11 +12,13 @@ import FeedbackFormInput from '@/components/FeedbackInput';
 import FeedbackFormTextarea from '@/components/FeedbackTextarea';
 import SubmitButton from '@/components/SubmitButton';
 import Loader from '@/components/Loader';
+import NotifyModal from '@/components/NotifyModal';
 
 import { TypeFormValues } from './types';
 
 const FeedbackForm: FC = () => {
   const [isSending, setIsSending] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const { t } = useTranslation();
   const {
     register,
@@ -45,6 +47,8 @@ const FeedbackForm: FC = () => {
       );
 
       const responseData = await response.json();
+
+      setIsModalOpen(true);
 
       reset();
     } catch (error) {
@@ -105,6 +109,7 @@ const FeedbackForm: FC = () => {
         )}
       </SubmitButton>
       <Toaster position="top-right" reverseOrder={false} />
+      {isModalOpen && <NotifyModal setIsModalOpen={setIsModalOpen} />}
     </form>
   );
 };
