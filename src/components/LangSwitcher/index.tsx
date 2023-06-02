@@ -19,7 +19,7 @@ const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
           onClick={() => handleLangChange('uk')}
           className={`${
             locale === 'uk' ? 'text-accent' : 'text-black-charcoal'
-          } relative after:absolute after:content-[''] after:w-[1px] after:h-6 after:bg-[#c3c3c3] after:-right-3 after:pointer-events-none`}
+          } relative after:absolute after:content-[''] after:w-[1px] after:h-6 after:bg-[#c3c3c3] after:-right-3 after:pointer-events-none hover:text-accent focus:text-accent focus:outline-none transition`}
           disabled={locale === 'uk'}
         >
           UA
@@ -30,7 +30,7 @@ const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
           onClick={() => handleLangChange('en')}
           className={`${
             locale === 'en' ? 'text-accent' : 'text-black-charcoal'
-          }`}
+          } hover:text-accent focus:text-accent focus:outline-none transition`}
           disabled={locale === 'en'}
         >
           ENG

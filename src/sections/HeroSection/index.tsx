@@ -13,7 +13,10 @@ const HeroSection: FC<IHeroProps> = ({ allBanners }) => {
   const { photo } = allBanners[0];
 
   return (
-    <section className="onlyMobile:pb-10 pt-[104px] tablet:pt-20 text-black-charcoal bg-yellow">
+    <section
+      id="#hero"
+      className="onlyMobile:pb-10 pt-[104px] tablet:pt-20 text-black-charcoal bg-yellow"
+    >
       <div className="container tablet:flex tablet:pr-0">
         <div
           className={`${s.background} tablet:w-[50%] onlyTablet:pr-[31px] tablet:pt-[60px] desktop:pt-[80px]`}
@@ -32,7 +35,7 @@ const HeroSection: FC<IHeroProps> = ({ allBanners }) => {
             alt={photo.alt}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
-            className="small:object-cover"
+            className="object-cover"
           />
         </div>
       </div>

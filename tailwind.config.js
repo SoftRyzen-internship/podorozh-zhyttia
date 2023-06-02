@@ -49,6 +49,7 @@ module.exports = {
         DEFAULT: '#FFFFFF',
         light: '#FFFFFC',
       },
+      crystal: 'rgba(0, 0, 0, 0)',
     },
 
     boxShadow: {

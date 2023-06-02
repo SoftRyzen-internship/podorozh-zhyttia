@@ -7,10 +7,11 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import FeedbackFormInput from '@/components/FeedbackInput';
 import FeedbackFormTextarea from '@/components/FeedbackTextarea';
 import SubmitButton from '@/components/SubmitButton';
-
-import { TypeFormValues } from './types';
+import Loader from '../Loader';
 
 import { botToken, groupId } from '@/components/TelegramBot';
+
+import { TypeFormValues } from './types';
 
 const FeedbackForm: FC = () => {
   const { t } = useTranslation();
@@ -82,17 +83,7 @@ const FeedbackForm: FC = () => {
         label="Commentary"
         id="inline-commentary"
         placeholder={t('form.comment')}
-        register={register(
-          'commentary'
-          //Запитати - чи е обов'язкове це поле?
-          // {
-          //   required: "*Це поле є обов'язковим",
-          //   minLength: {
-          //     value: 5,
-          //     message: 'Мінімальна довжина 5 символів',
-          //   },
-          // }
-        )}
+        register={register('commentary')}
         error={errors?.commentary?.message}
         rows={6}
       />
