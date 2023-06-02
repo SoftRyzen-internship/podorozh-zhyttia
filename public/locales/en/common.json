@@ -72,5 +72,9 @@
     "contacts": "Contacts",
     "address": "04214, Kyiv, Heroiv Dnipra str., 53 office 3",
     "social": "Social networks"
+  },
+  "modal": {
+    "modal-text": "Your message has been sent successfully",
+    "aria-close": "Close the modal window" 
   }
 }
