@@ -18,7 +18,7 @@ const MentalSupportSection: FC<MentalSupportSectionProps> = ({
 }) => {
   const { t } = useTranslation();
   return (
-    <section id='#psyhological' className={`${styles.mentalSupport} py-10`}>
+    <section id='#psyhological' className={`bg-circle py-10`}>
       <div className="container">
         <div className="flex justify-center tablet:justify-start desktop:justify-start">
           <Heading>{t('psyhological_help')}</Heading>
