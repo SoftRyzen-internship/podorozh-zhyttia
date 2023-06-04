@@ -47,7 +47,7 @@ const BookSection: FC = () => {
             <Image
               className="object-cover rounded"
               loading="lazy"
-              src="/images/book/book_d@2.jpg"
+              src="/images/book/book_d@x2.jpg"
               fill
               alt={t('book.alt')}
             />
