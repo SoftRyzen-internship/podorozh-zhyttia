@@ -6,7 +6,7 @@ import NavLink from '@/components/NavLink';
 import { navLinks } from '@/constants/navLinks/navLinks';
 import { INavBarProps } from './types';
 
-const NavBar: FC<INavBarProps> = ({ className, offset }) => {
+const NavBar: FC<INavBarProps> = ({ className, offset = 0 }) => {
   const { t } = useTranslation();
 
   return (

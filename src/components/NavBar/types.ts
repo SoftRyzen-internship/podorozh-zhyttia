@@ -1,4 +1,4 @@
 export interface INavBarProps {
-  offset: number;
+  offset?: number;
   className?: string;
 }
