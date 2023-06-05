@@ -9,7 +9,7 @@ import logoSvg from 'public/images/logo.png';
 const Logo: FC<ILogoProps> = ({ className }) => {
   return (
     <Link
-      className={`block relative ${className}`}
+      className={`block relative cursor-pointer hover:scale-110 ${className}`}
       to="#hero"
       smooth={true}
       spy={true}
