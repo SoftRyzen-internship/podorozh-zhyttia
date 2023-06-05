@@ -13,9 +13,7 @@ const BookSection: FC = () => {
       <div className="container py-10 tablet:py-20 desktop:py-[100px] text-black-charcoal">
         <div className="desktop:grid desktop:grid-cols-2 desktop:gap-8">
           <div>
-            <div className="text-4xl">
-              <Heading weight="bold">{t('book.title')}</Heading>
-            </div>
+            <Heading className="text-4xl font-bold">{t('book.title')}</Heading>
             <h3 className="mt-8 text-lg font-bold">{t('book.subtitle')}</h3>
             <div className="mt-8 onlyTablet:grid onlyTablet:grid-cols-2 onlyTablet:gap-8">
               <div className="desktop:w-[487px]">
@@ -28,9 +26,9 @@ const BookSection: FC = () => {
                 <p className="mt-8 font-bold desktop:mt-10">
                   {t('book.author')}
                 </p>
-                <div className="mt-10">
-                  <LinkButton href="#">{t('btn.more')}</LinkButton>
-                </div>
+                <LinkButton href="#" className="mt-10">
+                  {t('btn.more')}
+                </LinkButton>
               </div>
               <div className="relative min-w-[280px] min-h-[346.5px] max-w[440px] flex justify-center mt-10 tablet:m-0 desktop:hidden">
                 <Image
