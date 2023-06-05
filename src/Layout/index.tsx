@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import Head from 'next/head';
 
-import { TypeLayoutProps } from '@/components/Layout/types';
+import { TypeLayoutProps } from '@/Layout/types';
 import Header from '@/sections/Header';
 import Footer from '@/sections/Footer';
 
