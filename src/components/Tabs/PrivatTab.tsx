@@ -49,11 +49,13 @@ const PrivatTab: FC = () => {
                 )}
               </div>
             ) : (
-              <Clipboard
-                aria-label={t('donate.aria-copy')}
-                className="cursor-pointer fill-accent hover:fill-accent-dark focus:fill-accent-dark"
-                onClick={handleCopyClick}
-              />
+              <button className="focus:outline-accent focus:outline-offset-4">
+                <Clipboard
+                  aria-label={t('donate.aria-copy')}
+                  className="cursor-pointer fill-accent hover:fill-accent-dark focus:fill-accent-dark"
+                  onClick={handleCopyClick}
+                />
+              </button>
             )}
           </div>
         </div>
@@ -61,7 +63,7 @@ const PrivatTab: FC = () => {
           href="https://next.privat24.ua/payments/form/%7B%22token%22%3A%2287accea8-7d2c-48d5-a308-174fa1becc56%22%7D"
           target="_blank"
           rel="noopener noreferrer"
-          className="group focus:outline-none"
+          className="group focus:outline-accent focus:outline-4 focus:outline-offset-4"
         >
           <div className="tablet:w-[392px] desktop:w-[425px] flex items-center justify-between mb-10 tablet:mb-0 py-3 pl-5 pr-[23px] bg-yellow rounded">
             <p className="w-[150px] tablet:w-auto text-base tablet:text-sm desktop:text-lg leading-7 font-normal">

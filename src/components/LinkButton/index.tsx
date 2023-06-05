@@ -9,7 +9,7 @@ const LinkButton: FC<LinkButtonProps> = ({ href, children, className }) => {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`inline-block text-center w-full tablet:w-[262px] h-14 py-4 px-10 text-base font-medium leading-normal text-white rounded bg-accent hover:bg-accent-dark focus:bg-accent-dark focus:outline-none transition-colors ${className}`}
+      className={`inline-block text-center w-full tablet:w-[262px] h-14 py-4 px-10 text-base font-medium leading-normal text-white rounded bg-accent hover:bg-accent-dark focus:bg-accent-dark focus:outline-accent focus:outline-offset-4 transition-colors ${className}`}
     >
       {children}
     </Link>

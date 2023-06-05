@@ -14,7 +14,7 @@ const BurgerButton: FC<IBurgerButton> = ({ handleCloseModal, closeModal }) => {
       onClick={handleCloseModal}
       aria-label={t('modal.aria-close') as string}
       type="button"
-      className="desktop:hidden"
+      className="desktop:hidden focus:outline-accent"
     >
       {closeModal ? <Exit /> : <Burger />}
     </button>

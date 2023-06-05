@@ -11,13 +11,13 @@ const NavLink: FC<NavLinkProps> = ({
 }) => {
   return (
     <Link
-      tabIndex={1}
+      tabIndex={0}
       to={path}
       smooth={true}
       spy={true}
       duration={500}
       offset={offset}
-      className="block text-lg font-normal leading-7 transition-colors cursor-pointer desktop:text-base desktop:leading-normal text-black-charcoal hover:text-accent focus:text-accent focus:outline-none"
+      className="block text-lg font-normal leading-7 transition-colors cursor-pointer desktop:text-base desktop:leading-normal text-black-charcoal hover:text-accent focus:text-accent focus:outline-accent focus:outline-offset-4"
       onClick={handleClick}
     >
       {children}

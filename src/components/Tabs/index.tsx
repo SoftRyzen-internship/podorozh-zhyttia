@@ -23,16 +23,16 @@ const Tabs: FC = () => {
         <TabButton>PayPal</TabButton>
       </Tab.List>
       <Tab.Panels>
-        <Tab.Panel>
+        <Tab.Panel className={'focus:outline-accent'}>
           <PrivatTab />
         </Tab.Panel>
-        <Tab.Panel>
+        <Tab.Panel className={'focus:outline-accent'}>
           <MonoTab />
         </Tab.Panel>
-        <Tab.Panel>
+        <Tab.Panel className={'focus:outline-accent'}>
           <SwiftTab />
         </Tab.Panel>
-        <Tab.Panel>
+        <Tab.Panel className={'focus:outline-accent'}>
           <PayPalTab />
         </Tab.Panel>
       </Tab.Panels>
