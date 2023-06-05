@@ -55,7 +55,9 @@ const Header: FC = () => {
           closeModal={closeModal}
         />
       </div>
-      {closeModal && <BurgerMenu handleCloseModal={handleCloseModal} />}
+      {closeModal && (
+        <BurgerMenu handleCloseModal={handleCloseModal} offset={offset} />
+      )}
     </header>
   );
 };
