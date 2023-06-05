@@ -3,7 +3,6 @@ import { useTranslation } from 'next-i18next';
 import { useForm, SubmitHandler } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 
-import { botToken, groupId } from '@/components/TelegramBot';
 import FeedbackFormInput from '@/components/FeedbackInput';
 import FeedbackFormTextarea from '@/components/FeedbackTextarea';
 import SubmitButton from '@/components/SubmitButton';
@@ -32,13 +31,15 @@ const FeedbackForm: FC = () => {
       setIsSending(true);
       const message = `Name: ${data.name}\nPhone: ${data.phone}\nCommentary: ${data.commentary}`;
       const response = await fetch(
-        `https://api.telegram.org/bot${botToken}/sendMessage`,
+        `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_BOT_TOKEN}/sendMessage`,
         {
           method: 'POST',
           headers: {
             'Content-Type': 'application/x-www-form-urlencoded',
           },
-          body: `chat_id=${groupId}&text=${encodeURIComponent(message)}`,
+          body: `chat_id=${
+            process.env.NEXT_PUBLIC_GROUP_ID
+          }&text=${encodeURIComponent(message)}`,
         }
       );
 
