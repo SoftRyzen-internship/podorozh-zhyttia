@@ -94,5 +94,12 @@
     "telegram-label": "Visit our telegram page",
     "youtube-label": "Visit our youtube page",
     "instagram-label": "Visit our instagram page"
+  },
+  "bunner_gallery": {
+    "alt1": "Soldier with binoculars",
+    "alt2": "Soldier with a rifle",
+    "alt3": "Soldier with a book",
+    "alt4": "Ruined church",
+    "alt5": "Volunteer team"
   }
 }
