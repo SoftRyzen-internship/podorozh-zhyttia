@@ -20,7 +20,7 @@ interface SliderProps {
 
 const SliderGallery: FC<SliderProps> = ({ BunnerApi }) => {
   const { t } = useTranslation();
-
+  console.log(BunnerApi);
   return (
     <>
       <div className="relative">
@@ -51,7 +51,7 @@ const SliderGallery: FC<SliderProps> = ({ BunnerApi }) => {
                     <Image
                       className="w-full h-full object-cover absolute top-0 left-0"
                       src={`/images/gallery/${photo.url}.jpg`}
-                      alt={photo.alt}
+                      alt={t(`${photo.alt}`)}
                       fill={true}
                     />
                   </div>

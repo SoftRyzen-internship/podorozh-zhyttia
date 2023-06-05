@@ -5,7 +5,7 @@ const BunnerApi: TypeBanner[] = [
     id: '1',
     title: 'Bunner1',
     photo: {
-      alt: 'Soldier with binoculars',
+      alt: 'bunner_gallery.alt1',
       url: 'Foto1',
     },
   },
@@ -13,7 +13,7 @@ const BunnerApi: TypeBanner[] = [
     id: '2',
     title: 'Bunner2',
     photo: {
-      alt: 'Soldier with a rifle',
+      alt: 'bunner_gallery.alt2',
       url: 'Foto2',
     },
   },
@@ -21,7 +21,7 @@ const BunnerApi: TypeBanner[] = [
     id: '3',
     title: 'Bunner3',
     photo: {
-      alt: 'Soldier with a book',
+      alt: 'bunner_gallery.alt3',
       url: 'Foto3',
     },
   },
@@ -29,24 +29,16 @@ const BunnerApi: TypeBanner[] = [
     id: '4',
     title: 'Bunner4',
     photo: {
-      alt: 'Soldier with binoculars',
-      url: 'Foto1',
+      alt: 'bunner_gallery.alt4',
+      url: 'Foto4',
     },
   },
   {
     id: '5',
     title: 'Bunner5',
     photo: {
-      alt: 'Soldier with a rifle',
-      url: 'Foto2',
-    },
-  },
-  {
-    id: '6',
-    title: 'Bunner6',
-    photo: {
-      alt: 'Soldier with a book',
-      url: 'Foto3',
+      alt: 'bunner_gallery.alt5',
+      url: 'Foto5',
     },
   },
 ];
