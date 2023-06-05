@@ -5,7 +5,7 @@ import NavLink from '@/components/NavLink';
 
 import { navLinks } from '@/constants/navLinks/navLinks';
 import { TypeNavigationLink } from '@/constants/navLinks/types';
-import { TypeBurgerMenuProps } from './type';
+import { TypeBurgerMenuProps } from './types';
 
 const BurgerMenu: FC<TypeBurgerMenuProps> = ({
   handleCloseModal,

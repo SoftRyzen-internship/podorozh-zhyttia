@@ -4,7 +4,7 @@ import { useTranslation } from 'next-i18next';
 import Burger from '/public/svg/burger.svg';
 import Exit from '/public/svg/exit.svg';
 
-import { IBurgerButton } from './interfaces';
+import { IBurgerButton } from './types';
 
 const BurgerButton: FC<IBurgerButton> = ({ handleCloseModal, closeModal }) => {
   const { t } = useTranslation();
