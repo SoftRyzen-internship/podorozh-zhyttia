@@ -1,9 +1,6 @@
 import { FC, useState } from 'react';
-
 import { useTranslation } from 'next-i18next';
-
 import { useForm, SubmitHandler } from 'react-hook-form';
-
 import toast, { Toaster } from 'react-hot-toast';
 
 import { botToken, groupId } from '@/components/TelegramBot';
@@ -64,7 +61,7 @@ const FeedbackForm: FC = () => {
       noValidate
     >
       <FeedbackFormInput
-        label="Name"
+        label={t('form.aria.name')}
         id="inline-name"
         placeholder={t('form.name')}
         register={register('name', {
@@ -77,7 +74,7 @@ const FeedbackForm: FC = () => {
         error={errors?.name?.message}
       />
       <FeedbackFormInput
-        label="Phone"
+        label={t('form.aria.phone')}
         id="inline-phone"
         placeholder={t('form.phone')}
         register={register('phone', {
@@ -90,7 +87,7 @@ const FeedbackForm: FC = () => {
         error={errors?.phone?.message}
       />
       <FeedbackFormTextarea
-        label="Commentary"
+        label={t('form.aria.message')}
         id="inline-commentary"
         placeholder={t('form.comment')}
         register={register('commentary')}

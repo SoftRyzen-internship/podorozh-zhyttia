@@ -5,15 +5,15 @@ import Youtube from 'public/svg/youtube.svg';
 
 export const SOCIAL_MEDIA = [
   {
-    label: 'Visit our instagram page',
+    label: 'socials.instagram-label',
     icon: Instagram,
     href: 'https://www.instagram.com/podorozhzhyttia',
   },
-  { label: 'Visit our telegram page', icon: Telegram, href: '#' },
+  { label: 'socials.telegram-label', icon: Telegram, href: '#' },
   {
-    label: 'Visit our facebook page',
+    label: 'socials.facebook-label',
     icon: Facebook,
     href: 'https://www.facebook.com/podorozhzhyttia',
   },
-  { label: 'Visit our youtube page', icon: Youtube, href: '#' },
+  { label: 'socials.youtube-label', icon: Youtube, href: '#' },
 ];
