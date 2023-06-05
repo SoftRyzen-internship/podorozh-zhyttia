@@ -20,7 +20,8 @@ const SwiftTab: FC = () => {
 
         <h4 className={s.title}>Name of the bank:</h4>
         <p className={s.text}>
-          SC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE
+          SC CB &quot;PRIVATBANK&quot;, 1D HRUSHEVSKOHO STR., KYIV, 01001,
+          UKRAINE
         </p>
 
         <h4 className={s.title}>Bank SWIFT Code:</h4>
@@ -54,7 +55,8 @@ const SwiftTab: FC = () => {
 
         <h4 className={s.title}>Name of the bank:</h4>
         <p className={s.text}>
-          SC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE
+          SC CB &quot;PRIVATBANK&quot;, 1D HRUSHEVSKOHO STR., KYIV, 01001,
+          UKRAINE
         </p>
 
         <h4 className={s.title}>Bank SWIFT Code:</h4>
