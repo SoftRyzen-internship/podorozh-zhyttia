@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { TypeLoaderProps } from './type';
+import { TypeLoaderProps } from './types';
 
 const Loader: FC<TypeLoaderProps> = ({ className }) => {
   return (

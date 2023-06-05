@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react';
 import { useTranslation } from 'next-i18next';
 
 import TabButton from '../TabButton';
-import PryvatTab from './PryvatTab';
+import PrivatTab from './PrivatTab';
 import MonoTab from './MonoTab';
 import SwiftTab from './SwiftTab';
 import PayPalTab from './PayPalTab';
@@ -24,7 +24,7 @@ const Tabs: FC = () => {
       </Tab.List>
       <Tab.Panels>
         <Tab.Panel>
-          <PryvatTab />
+          <PrivatTab />
         </Tab.Panel>
         <Tab.Panel>
           <MonoTab />

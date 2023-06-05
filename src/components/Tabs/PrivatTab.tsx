@@ -3,11 +3,11 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import Clipboard from 'public/svg/clipboard.svg';
-import PryvatQR from 'public/svg/pryvatQR.svg';
+import PrivatQR from 'public/svg/privatQR.svg';
 import Arrow from 'public/svg/arrow.svg';
 import Tick from 'public/svg/tick.svg';
 
-const PryvatTab: FC = () => {
+const PrivatTab: FC = () => {
   const { t } = useTranslation();
   const [clicked, setClicked] = useState(false);
   const [showCopiedMessage, setShowCopiedMessage] = useState(false);
@@ -75,10 +75,10 @@ const PryvatTab: FC = () => {
         </Link>
       </div>
       <div className="max-w-[280px] max-h-[280px] tablet:w-[152px] tablet:h-[152px] desktop:w-[200px] desktop:h-[200px] mx-auto tablet:mx-0">
-        <PryvatQR />
+        <PrivatQR />
       </div>
     </article>
   );
 };
 
-export default PryvatTab;
+export default PrivatTab;

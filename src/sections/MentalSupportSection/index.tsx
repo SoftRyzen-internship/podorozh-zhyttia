@@ -21,9 +21,9 @@ const MentalSupportSection: FC<MentalSupportSectionProps> = ({
       className={`bg-circle py-10 tablet:py-20 desktop:[100px]`}
     >
       <div className="container">
-        <div className="flex tablet:justify-start desktop:justify-start">
-          <Heading>{t('psyhological_help')}</Heading>
-        </div>
+        <Heading className="flex tablet:justify-start desktop:justify-start">
+          {t('psyhological_help')}
+        </Heading>
         <Slider allPsychologists={allPsychologists} />
         <div className="mt-10 desktop:mt-[60px] flex justify-center">
           <ScrollLink path="/about">{t('btn.talk')}</ScrollLink>
