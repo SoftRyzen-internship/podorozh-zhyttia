@@ -9,7 +9,7 @@ const BookSection: FC = () => {
   const { t } = useTranslation();
 
   return (
-    <section id='#books'>
+    <section id="#books">
       <div className="container py-10 tablet:py-20 desktop:py-[100px] text-black-charcoal">
         <div className="desktop:grid desktop:grid-cols-2 desktop:gap-8">
           <div>
@@ -32,25 +32,23 @@ const BookSection: FC = () => {
                   <LinkButton href="#">{t('btn.more')}</LinkButton>
                 </div>
               </div>
-              <div className="max-w[440px] flex justify-center mt-10 tablet:m-0 desktop:hidden">
+              <div className="relative min-w-[280px] min-h-[346.5px] max-w[440px] flex justify-center mt-10 tablet:m-0 desktop:hidden">
                 <Image
                   className="w-full rounded object-cover tablet:w-[336px] tablet:h-[416px]"
                   loading="lazy"
-                  src="/images/book/book_m@2.jpg"
-                  width="320"
-                  height="396"
+                  src="/images/book/book_d@x2.jpg"
+                  fill
                   alt={t('book.alt')}
                 />
               </div>
             </div>
           </div>
-          <div className="hidden desktop:block">
+          <div className="relative hidden desktop:block">
             <Image
               className="object-cover rounded"
               loading="lazy"
-              src="/images/book/book_d@2.jpg"
-              width="593"
-              height="493"
+              src="/images/book/book_d@x2.jpg"
+              fill
               alt={t('book.alt')}
             />
           </div>
