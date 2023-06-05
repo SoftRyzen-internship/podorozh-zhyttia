@@ -1,8 +1,6 @@
 import { FC } from 'react';
 import { useTranslation } from 'next-i18next';
 
-import styles from './MentalSupport.module.css';
-
 import Slider from '@/components/Slider';
 import Heading from '@/components/Heading';
 import ScrollLink from '@/components/ScrollLink';

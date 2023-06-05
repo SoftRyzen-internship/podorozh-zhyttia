@@ -1,12 +1,10 @@
 import { FC } from 'react';
-
 import { useTranslation } from 'next-i18next';
 
 import NavLink from '@/components/NavLink';
 
 import { navLinks } from '@/constants/navLinks/navLinks';
-
-import { TypeNavigationLink } from '../../constants/navLinks/types';
+import { TypeNavigationLink } from '@/constants/navLinks/types';
 import { TypeBurgerMenuProps } from './type';
 
 const BurgerMenu: FC<TypeBurgerMenuProps> = ({

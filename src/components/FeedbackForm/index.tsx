@@ -7,7 +7,6 @@ import { useForm, SubmitHandler } from 'react-hook-form';
 import toast, { Toaster } from 'react-hot-toast';
 
 import { botToken, groupId } from '@/components/TelegramBot';
-
 import FeedbackFormInput from '@/components/FeedbackInput';
 import FeedbackFormTextarea from '@/components/FeedbackTextarea';
 import SubmitButton from '@/components/SubmitButton';
