@@ -54,7 +54,12 @@
       "phone": "*Incorrect number format",
       "message": "Error while sending the message."
     },
-    "success": "Your message has been sent successfully"
+    "success": "Your message has been sent successfully",
+    "aria": {
+      "name": "Name input field",
+      "phone": "Phone number input field",
+      "message": "Comment input field"
+    }
   },
   "book": {
     "title": "How are you?",
@@ -76,5 +81,15 @@
   "modal": {
     "modal-text": "Your message has been sent successfully",
     "aria-close": "Close the modal window"
+  },
+  "slider": {
+    "prev": "Previous image",
+    "next": "Next image"
+  },
+  "socials": {
+    "facebook-label": "Visit our facebook page",
+    "telegram-label": "Visit our telegram page",
+    "youtube-label": "Visit our youtube page",
+    "instagram-label": "Visit our instagram page"
   }
 }
