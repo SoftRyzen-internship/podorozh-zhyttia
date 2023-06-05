@@ -23,7 +23,7 @@ const MentalSupportSection: FC<MentalSupportSectionProps> = ({
       className={`bg-circle py-10 tablet:py-20 desktop:[100px]`}
     >
       <div className="container">
-        <div className="flex justify-center tablet:justify-start desktop:justify-start">
+        <div className="flex tablet:justify-start desktop:justify-start">
           <Heading>{t('psyhological_help')}</Heading>
         </div>
         <Slider allPsychologists={allPsychologists} />
