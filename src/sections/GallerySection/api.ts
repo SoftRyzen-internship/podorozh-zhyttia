@@ -3,49 +3,49 @@ import { TypeBanner } from '@/types';
 const BunnerApi: TypeBanner[] = [
   {
     id: '1',
-    title: 'Bunner',
+    title: 'Bunner1',
     photo: {
-      alt: 'string',
+      alt: 'Soldier with binoculars',
       url: 'Foto1',
     },
   },
   {
     id: '2',
-    title: 'Bunner',
+    title: 'Bunner2',
     photo: {
-      alt: 'string',
+      alt: 'Soldier with a rifle',
       url: 'Foto2',
     },
   },
   {
     id: '3',
-    title: 'Bunner',
+    title: 'Bunner3',
     photo: {
-      alt: 'string',
+      alt: 'Soldier with a book',
       url: 'Foto3',
     },
   },
   {
     id: '4',
-    title: 'Bunner',
+    title: 'Bunner4',
     photo: {
-      alt: 'string',
+      alt: 'Soldier with binoculars',
       url: 'Foto1',
     },
   },
   {
     id: '5',
-    title: 'Bunner',
+    title: 'Bunner5',
     photo: {
-      alt: 'string',
+      alt: 'Soldier with a rifle',
       url: 'Foto2',
     },
   },
   {
     id: '6',
-    title: 'Bunner',
+    title: 'Bunner6',
     photo: {
-      alt: 'string',
+      alt: 'Soldier with a book',
       url: 'Foto3',
     },
   },
