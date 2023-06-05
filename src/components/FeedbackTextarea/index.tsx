@@ -1,6 +1,6 @@
 import { FC } from 'react';
 
-import { IInputFieldProps } from '@/components/FeedbackInput/interfaces';
+import { IInputFieldProps } from '@/components/FeedbackInput/types';
 
 const FeedbackFormTextarea: FC<IInputFieldProps> = ({
   label,
