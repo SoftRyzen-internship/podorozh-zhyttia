@@ -30,7 +30,7 @@ const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
           onClick={() => handleLangChange('en')}
           className={`${
             locale === 'en' ? 'text-accent' : 'text-black-charcoal'
-          } hover:text-accent focus:text-accent focus:outline focus:outline-accent focus:outline-4 focus:outline-offset-4 transition`}
+          } hover:text-accent focus:text-accent focus:outline-accent focus:outline-offset-4 transition`}
           disabled={locale === 'en'}
         >
           ENG
