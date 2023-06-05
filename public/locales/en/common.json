@@ -43,10 +43,12 @@
   },
   "feedback": {
     "title": "Contact to psychologist",
-    "step1": "If you are in despair, hopelessness, in a difficult situation, have lost faith, meanings, support.",
-    "step2": "If you lost a loved one or a dear person, or a friend",
-    "step3": "If you need support or help",
-    "step4": "If you simply have something to say - write."
+    "steps": [
+      "If you are in despair, hopelessness, in a difficult situation, have lost faith, meanings, support",
+      "If you lost a loved one or a dear person, or a friend",
+      "If you need support or help",
+      "If you simply have something to say - write"
+    ]
   },
   "form": {
     "name": "Name",
