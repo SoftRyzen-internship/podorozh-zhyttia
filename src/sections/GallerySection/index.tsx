@@ -14,9 +14,9 @@ const GallerySection: FC = () => {
       className="py-10 tablet:py-20 desktop:py-[100px] border-b-[1px] border-b-accent"
     >
       <div className="container">
-        <div className="flex justify-center tablet:justify-start desktop:justify-start">
-          <Heading>{t('gallery')}</Heading>
-        </div>
+        <Heading className="flex justify-center tablet:justify-start desktop:justify-start">
+          {t('gallery')}
+        </Heading>
         <SliderGallery BunnerApi={BunnerApi} />
       </div>
     </section>
