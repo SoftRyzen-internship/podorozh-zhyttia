@@ -1,4 +1,5 @@
 import { TypeBanner } from '@/types';
+
 const BunnerApi: TypeBanner[] = [
   {
     id: '1',

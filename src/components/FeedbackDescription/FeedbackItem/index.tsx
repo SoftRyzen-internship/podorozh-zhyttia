@@ -1,4 +1,5 @@
 import { FC } from 'react';
+
 import { TypeDescriptionItem } from '@/components/FeedbackDescription/FeedbackItem/types';
 
 const FeedbackItem: FC<TypeDescriptionItem> = ({ text, number }) => {
