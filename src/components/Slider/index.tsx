@@ -80,14 +80,14 @@ const Slider: FC<SliderProps> = ({ allPsychologists }) => {
           <button
             type="button"
             aria-label={t('slider.prev') as string}
-            className="custom-swiper-button-prev mr-[23px] enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light"
+            className="custom-swiper-button-prev mr-[23px] enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light focus:outline-accent"
           >
             <PrevArrow fill="currentColor" />
           </button>
           <button
             type="button"
             aria-label={t('slider.next') as string}
-            className="custom-swiper-button-next enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light"
+            className="custom-swiper-button-next enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light focus:outline-accent"
           >
             <NextArrow fill="currentColor" />
           </button>

@@ -17,7 +17,7 @@ const Address: FC<typeAddressProps> = ({ className }) => {
           <li>
             <Link
               href="tel:+380956642113"
-              className="hover:text-accent hover:duration-300 focus:outline-none focus:text-accent"
+              className="hover:text-accent hover:duration-300 focus:outline-accent focus:outline-offset-4 focus:text-accent"
             >
               +380956642113
             </Link>
@@ -25,7 +25,7 @@ const Address: FC<typeAddressProps> = ({ className }) => {
           <li>
             <Link
               href="mailto:chepurko.larysa@gmail.com"
-              className="underline hover:text-accent hover:duration-300 focus:outline-none focus:text-accent"
+              className="underline hover:text-accent hover:duration-300 focus:outline-accent focus:outline-offset-4 focus:text-accent"
             >
               chepurko.larysa@gmail.com
             </Link>

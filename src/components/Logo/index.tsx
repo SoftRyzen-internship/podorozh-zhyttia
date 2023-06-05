@@ -9,11 +9,12 @@ import logoSvg from 'public/images/logo.png';
 const Logo: FC<ILogoProps> = ({ className }) => {
   return (
     <Link
-      className={`block relative cursor-pointer hover:scale-110 ${className}`}
+      className={`block relative cursor-pointer hover:scale-110 ${className} focus:outline-accent`}
       to="#hero"
       smooth={true}
       spy={true}
       duration={500}
+      tabIndex={0}
     >
       <Image className="object-contain" src={logoSvg} fill={true} alt="alt" />
     </Link>

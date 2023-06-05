@@ -26,7 +26,7 @@ const MentalSupportSection: FC<MentalSupportSectionProps> = ({
         </Heading>
         <Slider allPsychologists={allPsychologists} />
         <div className="mt-10 desktop:mt-[60px] flex justify-center">
-          <ScrollLink path="/about">{t('btn.talk')}</ScrollLink>
+          <ScrollLink path="#feedback">{t('btn.talk')}</ScrollLink>
         </div>
       </div>
     </section>

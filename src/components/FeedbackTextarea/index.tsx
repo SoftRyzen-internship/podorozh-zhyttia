@@ -19,7 +19,7 @@ const FeedbackFormTextarea: FC<IInputFieldProps> = ({
         <textarea
           className={`${
             !error ? 'border-accent' : 'border-red'
-          } h-full resize-none bg-yellow placeholder-black-charcoal border rounded-sm w-full py-3 px-2.5 tablet:px-3 text-black-charcoal text-base leading-6  focus:outline-none focus:border-[3px]`}
+          } h-full resize-none bg-yellow placeholder-black-charcoal border rounded-sm w-full py-3 px-2.5 tablet:px-3 text-black-charcoal text-base leading-6 focus:outline-accent`}
           id={id}
           placeholder={placeholder}
           aria-label={label}

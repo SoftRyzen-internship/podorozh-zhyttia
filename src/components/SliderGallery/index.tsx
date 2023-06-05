@@ -64,14 +64,14 @@ const SliderGallery: FC<SliderProps> = ({ BunnerApi }) => {
           <button
             type="button"
             aria-label={t('slider.prev') as string}
-            className="gallery-swiper-button-prev mr-[23px] enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light"
+            className="gallery-swiper-button-prev mr-[23px] enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light focus:outline-accent"
           >
             <PrevArrow fill="currentColor" />
           </button>
           <button
             type="button"
             aria-label={t('slider.next') as string}
-            className="gallery-swiper-button-next enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light"
+            className="gallery-swiper-button-next enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light focus:outline-accent"
           >
             <NextArrow fill="currentColor" />
           </button>

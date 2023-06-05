@@ -44,11 +44,13 @@ const PayPalTab: FC = () => {
             )}
           </div>
         ) : (
-          <Clipboard
-            aria-label={t('donate.aria-copy')}
-            className="cursor-pointer fill-accent hover:fill-accent-dark focus:fill-accent-dark"
-            onClick={handleCopyClick}
-          />
+          <button className="focus:outline-accent focus:outline-offset-4">
+            <Clipboard
+              aria-label={t('donate.aria-copy')}
+              className="cursor-pointer fill-accent hover:fill-accent-dark focus:fill-accent-dark"
+              onClick={handleCopyClick}
+            />
+          </button>
         )}
       </div>
     </article>
