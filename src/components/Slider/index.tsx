@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import Image from 'next/image';
+import { useTranslation } from 'next-i18next';
 
 import SwiperCore, { Navigation } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -18,6 +19,8 @@ interface SliderProps {
 }
 
 const Slider: FC<SliderProps> = ({ allPsychologists }) => {
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="relative">
@@ -76,14 +79,14 @@ const Slider: FC<SliderProps> = ({ allPsychologists }) => {
         <div className="w-[120px] flex items-center mt-8 m-auto tablet:absolute tablet:mt-0 tablet:top-[-70px] tablet:right-0 desktop:absolute desktop:mt-0 desktop:top-[-80px] desktop:right-0">
           <button
             type="button"
-            aria-label="prev"
+            aria-label={t('slider.prev') as string}
             className="custom-swiper-button-prev mr-[23px] enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light"
           >
             <PrevArrow fill="currentColor" />
           </button>
           <button
             type="button"
-            aria-label="next"
+            aria-label={t('slider.next') as string}
             className="custom-swiper-button-next enabled:text-accent disabled:text-accent-light focus:disabled:text-accent-light"
           >
             <NextArrow fill="currentColor" />
