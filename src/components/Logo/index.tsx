@@ -16,7 +16,7 @@ const Logo: FC<ILogoProps> = ({ className }) => {
       duration={500}
       tabIndex={0}
     >
-      <Image className="object-contain" src={logoSvg} fill={true} alt="alt" />
+      <Image className="object-contain" src={logoSvg} fill={true} alt="logo" />
     </Link>
   );
 };

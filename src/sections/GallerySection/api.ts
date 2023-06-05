@@ -3,50 +3,42 @@ import { TypeBanner } from '@/types';
 const BunnerApi: TypeBanner[] = [
   {
     id: '1',
-    title: 'Bunner',
+    title: 'Bunner1',
     photo: {
-      alt: 'string',
+      alt: 'bunner_gallery.alt1',
       url: 'Foto1',
     },
   },
   {
     id: '2',
-    title: 'Bunner',
+    title: 'Bunner2',
     photo: {
-      alt: 'string',
+      alt: 'bunner_gallery.alt2',
       url: 'Foto2',
     },
   },
   {
     id: '3',
-    title: 'Bunner',
+    title: 'Bunner3',
     photo: {
-      alt: 'string',
+      alt: 'bunner_gallery.alt3',
       url: 'Foto3',
     },
   },
   {
     id: '4',
-    title: 'Bunner',
+    title: 'Bunner4',
     photo: {
-      alt: 'string',
-      url: 'Foto1',
+      alt: 'bunner_gallery.alt4',
+      url: 'Foto4',
     },
   },
   {
     id: '5',
-    title: 'Bunner',
+    title: 'Bunner5',
     photo: {
-      alt: 'string',
-      url: 'Foto2',
-    },
-  },
-  {
-    id: '6',
-    title: 'Bunner',
-    photo: {
-      alt: 'string',
-      url: 'Foto3',
+      alt: 'bunner_gallery.alt5',
+      url: 'Foto5',
     },
   },
 ];
