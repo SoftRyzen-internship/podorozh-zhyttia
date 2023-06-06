@@ -26,7 +26,7 @@ const BookSection: FC = () => {
                 <p className="mt-8 font-bold desktop:mt-10">
                   {t('book.author')}
                 </p>
-                <LinkButton href="#" className="mt-10">
+                <LinkButton href="https://yakty.com.ua" className="mt-10">
                   {t('btn.more')}
                 </LinkButton>
               </div>
