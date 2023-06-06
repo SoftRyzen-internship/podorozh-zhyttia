@@ -20,7 +20,6 @@ interface SliderProps {
 
 const SliderGallery: FC<SliderProps> = ({ BunnerApi }) => {
   const { t } = useTranslation();
-  console.log(BunnerApi);
   return (
     <>
       <div className="relative">
