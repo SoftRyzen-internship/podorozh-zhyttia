@@ -72,7 +72,7 @@ module.exports = {
     },
     backgroundImage: {
       circle: "url('/svg/puzzle.svg')",
-      docs: "url('/svg/l_docs.svg'),url('/svg/r_docs.svg')",
+      docs: "url('/svg/left-doc.svg'),url('/svg/right-doc.svg')",
       leafsTablet: "url('/images/feedback/leafs-tablet.svg')",
       leafsDesktop: "url('/images/feedback/leafs-desktop.svg')",
       modal: "url('/svg/modal-bg.svg')",

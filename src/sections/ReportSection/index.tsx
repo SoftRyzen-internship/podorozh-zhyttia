@@ -9,7 +9,7 @@ const ReportSection: FC = () => {
 
   return (
     <section id="#reports" className="bg-circle bg-repeat bg-[size:72px]">
-      <div className="container flex flex-col items-center py-10 text-center tablet:text-2xl desktop:text-4xl tablet:py-20 desktop:py-[100px] tablet:bg-docs tablet:bg-[position:left_bottom,right_top] tablet:bg-[size:243px,226px] desktop:bg-[size:370px,390px] bg-no-repeat">
+      <div className="container flex flex-col items-center py-10 text-center tablet:text-2xl desktop:text-4xl tablet:py-20 desktop:py-[100px] tablet:bg-docs tablet:bg-[position:-40px_210px,490px_-100px] tablet:bg-[size:290px,290px] desktop:bg-[position:-65px_210px,910px_-120px] desktop:bg-[size:370px,390px] bg-no-repeat">
         <Heading className="font-bold">{t('report.title')}</Heading>
         <p className="mt-8 text-sm w-[284px] tablet:text-lg tablet:w-[450px] tablet:mt-10 desktop:mt-12">
           {t('report.description')}
