@@ -1,13 +1,16 @@
 import { FC } from 'react';
 import { useTranslation } from 'next-i18next';
+import { SwiperSlide } from 'swiper/react';
 
-import SliderGallery from '@/components/SliderGallery';
+import Slider from '@/components/Slider';
+import SlideGallery from '@/components/SlideGallery';
 import Heading from '@/components/Heading';
 
-import BunnerApi from './api';
+import banners from './api';
 
 const GallerySection: FC = () => {
   const { t } = useTranslation();
+
   return (
     <section
       id="#gallery"
@@ -17,7 +20,16 @@ const GallerySection: FC = () => {
         <Heading className="flex justify-center tablet:justify-start desktop:justify-start">
           {t('gallery')}
         </Heading>
-        <SliderGallery BunnerApi={BunnerApi} />
+        <Slider
+          nextButtonSelector="gallery-btn-next"
+          prevButtonSelector="gallery-btn-prev"
+        >
+          {banners.map(({ id, title, photo }) => (
+            <SwiperSlide key={id}>
+              <SlideGallery id={id} title={title} photo={photo} />
+            </SwiperSlide>
+          ))}
+        </Slider>
       </div>
     </section>
   );
