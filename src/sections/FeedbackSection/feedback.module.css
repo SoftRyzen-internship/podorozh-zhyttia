@@ -1,5 +1,0 @@
-.box {
-  @media (min-width: 768px) {
-    background-repeat: no-repeat, repeat;
-  }
-}
