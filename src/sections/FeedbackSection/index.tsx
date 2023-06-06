@@ -3,15 +3,10 @@ import { FC } from 'react';
 import FeedbackForm from '@/components/FeedbackForm';
 import FeedbackDescription from '@/components/FeedbackDescription';
 
-import styles from '@/sections/FeedbackSection/feedback.module.css';
-
 const FeedbackSection: FC = () => {
   return (
-    <section
-      id="#feedback"
-      className={`py-10 tablet:py-[80px] desktop:pt-[100px] desktop:pb-[140px]  bg-circle tablet:bg-leafsTablet desktop:bg-leafsDesktop bg-[position:left_bottom,left_top] tablet:bg-[size:390px,72px] desktop:bg-[size:640px,72px] ${styles.box}`}
-    >
-      <div className="container">
+    <section id="#feedback" className="bg-circle bg-repeat bg-[size:72px]">
+      <div className="container tablet:bg-leafsTablet desktop:bg-leafsDesktop bg-no-repeat bg-left-bottom py-10 tablet:py-[80px] desktop:pt-[100px] desktop:pb-[140px] tablet:bg-[size:390px] desktop:bg-[size:640px]">
         <div className="tablet:flex justify-between desktop:pr-[105px]">
           <FeedbackDescription />
           <FeedbackForm />
