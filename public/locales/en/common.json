@@ -56,7 +56,7 @@
     "comment": "Comment",
     "error": {
       "name": "*Check that the data is entered correctly",
-      "phone": "*Input format, country code (+380)(number) +380xxxxxxxxx",
+      "phone": "*Phone number format: +380XXXXXXXXXX",
       "message": "Error while sending the message."
     },
     "success": "Your message has been sent successfully",
