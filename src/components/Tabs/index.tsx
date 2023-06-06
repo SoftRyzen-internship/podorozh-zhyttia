@@ -2,7 +2,7 @@ import { FC } from 'react';
 import { Tab } from '@headlessui/react';
 import { useTranslation } from 'next-i18next';
 
-import TabButton from '../TabButton';
+import TabButton from '@/components/TabButton';
 import PrivatTab from './PrivatTab';
 import MonoTab from './MonoTab';
 import SwiftTab from './SwiftTab';
