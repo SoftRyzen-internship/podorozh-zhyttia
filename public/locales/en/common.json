@@ -1,0 +1,107 @@
+{
+  "nav": {
+    "psychological_help": "Psychological help",
+    "how_are_you": "How are you?",
+    "reports": "Reports",
+    "gallery": "Gallery",
+    "contacts": "Contacts"
+  },
+  "btn": {
+    "donate": "Donate",
+    "talk": "Talk to psychologist",
+    "support": "Support",
+    "submit": "Submit",
+    "sending": "Sending...",
+    "more": "Read more",
+    "report": "See reporting"
+  },
+  "head": {
+    "title": "Podorozh zhyttia"
+  },
+  "hero": {
+    "title": "Charitable Foundation \"Podorozh ZHYTTIA\"",
+    "description": "We organize fundraising for units of the Armed Forces of Ukraine by request. Also we will be happy to help in questions of rehabilitation"
+  },
+  "psyhological_help": "Psychological help",
+  "donate": {
+    "title": "Donate",
+    "private24": "Privat24",
+    "card": "Card:",
+    "link": "Link to online transfer",
+    "box": "box",
+    "company": "CF PODOROZH ZHYTTIA",
+    "address": "UA 04214, Kyiv, 53, Heroiv Dnipra Str. office 3",
+    "copied": "Copied",
+    "aria-copy": "Copy to clipboard",
+    "aria-copiedCard": "The card number has been copied",
+    "aria-copiedBox": "The box has been copied",
+    "aria-goTo": "Go to the transfer page"
+  },
+  "support": {
+    "title": "Donate",
+    "description": "To support charity foundation. Foundation do not pay any salaries as volunteers work here. And we will be happy to get support"
+  },
+  "feedback": {
+    "title": "Contact to psychologist",
+    "steps": [
+      "If you are in despair, hopelessness, in a difficult situation, have lost faith, meanings, support",
+      "If you lost a loved one or a dear person, or a friend",
+      "If you need support or help",
+      "If you simply have something to say - write"
+    ]
+  },
+  "form": {
+    "name": "Name",
+    "phone": "Phone",
+    "comment": "Comment",
+    "error": {
+      "name": "*Check that the data is entered correctly",
+      "phone": "*Phone number format: +380XXXXXXXXXX",
+      "message": "Error while sending the message."
+    },
+    "success": "Your message has been sent successfully",
+    "aria": {
+      "name": "Name input field",
+      "phone": "Phone number input field",
+      "message": "Comment input field"
+    }
+  },
+  "book": {
+    "title": "How are you?",
+    "subtitle": "Books for psychological support to each other",
+    "description": "<1>Books for military and civilians, that help to learn how to give psychological support to each other during the war.</1><2> Because of the war, there are a lot of people with the trauma experience and there are not enough psychologists. That’s why each of us can be a psychologist a little bit for those who need support or help.</2>",
+    "author": "Anton Semenov, psychologist",
+    "alt": "The book \"How are you Bro?\""
+  },
+  "report": {
+    "title": "Reports",
+    "description": "Here you can check how we spend fundraised money"
+  },
+  "gallery": "Gallery",
+  "footer": {
+    "contacts": "Contacts",
+    "address": "04214, Kyiv, Heroiv Dnipra str., 53 office 3",
+    "social": "Social networks"
+  },
+  "modal": {
+    "modal-text": "Your message has been sent successfully",
+    "aria-close": "Close the modal window"
+  },
+  "slider": {
+    "prev": "Previous image",
+    "next": "Next image"
+  },
+  "socials": {
+    "facebook-label": "Visit our facebook page",
+    "telegram-label": "Visit our telegram page",
+    "youtube-label": "Visit our youtube page",
+    "instagram-label": "Visit our instagram page"
+  },
+  "bunner_gallery": {
+    "alt1": "Soldier with binoculars",
+    "alt2": "Soldier with a rifle",
+    "alt3": "Soldier with a book",
+    "alt4": "Ruined church",
+    "alt5": "Volunteer team"
+  }
+}
