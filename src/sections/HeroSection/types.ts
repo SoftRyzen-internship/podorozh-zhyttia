@@ -1,12 +1,4 @@
-type BannerType = {
-  id: string;
-  title: string;
-  photo: {
-    url: string;
-    alt: string;
-  };
-};
-
+import { TypeBanner } from '@/types';
 export interface IHeroProps {
-  allBanners: BannerType[];
+  allBanners: TypeBanner[];
 }

@@ -1,6 +1,8 @@
 type TypePhoto = {
   alt: string;
   url: string;
+  width: number;
+  height: number;
 };
 
 export type TypePsychologist = {

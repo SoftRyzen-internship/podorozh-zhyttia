@@ -6,6 +6,8 @@ export const DATO_CMS_QUERY = `query PSYCHOLOGIST($_locale: SiteLocale, $_first:
     psychologistPhoto {
       url
       alt
+      width
+      height
     }
   }
   allBanners(locale: $_locale) {
@@ -14,6 +16,8 @@ export const DATO_CMS_QUERY = `query PSYCHOLOGIST($_locale: SiteLocale, $_first:
     photo {
       url
       alt
+      width
+      height
     }
   }
 }`;
