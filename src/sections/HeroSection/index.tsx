@@ -35,6 +35,7 @@ const HeroSection: FC<IHeroProps> = ({ allBanners }) => {
             alt={photo.alt}
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
+            priority
             className="object-cover"
           />
         </div>
