@@ -9,9 +9,15 @@ import BurgerMenu from '@/components/BurgerMenu';
 
 const Header: FC = () => {
   const headerRef = useRef<HTMLElement | null>(null);
-  const [offset, setOffset] = useState<number>(0);
 
+  const [offset, setOffset] = useState<number>(0);
   const [isCloseModal, setIsCloseModal] = useState<boolean>(false);
+  const [activePath, setActivePath] = useState<string | null>(null);
+
+  const handleActivePath = (path: string) => {
+    setActivePath(path);
+    handleCloseModal();
+  };
 
   const handleToggleModal = () => {
     setIsCloseModal(!isCloseModal);
@@ -57,6 +63,8 @@ const Header: FC = () => {
         <Logo className="w-[77px] h-[50px] tablet:w-[111px] tablet:h-[77px]" />
 
         <NavBar
+          activePatch={activePath}
+          onActivePatch={handleActivePath}
           className="hidden desktop:block desktop:ml-auto"
           offset={offset}
         />
@@ -69,7 +77,12 @@ const Header: FC = () => {
         />
       </div>
       {isCloseModal && (
-        <BurgerMenu handleCloseModal={handleCloseModal} offset={offset} />
+        <BurgerMenu
+          activePatch={activePath}
+          onActivePatch={setActivePath}
+          handleCloseModal={handleCloseModal}
+          offset={offset}
+        />
       )}
     </header>
   );
