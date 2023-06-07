@@ -18,8 +18,7 @@ const SlidePsychologist: FC<TypePsychologist> = ({
           fill={true}
         />
       </div>
-
-      <div className="h-[180px] flex flex-col py-7 px-5 tablet:px-7 desktop:px-7 bg-white">
+      <div className="small:h-[180px] flex flex-col py-7 px-5 tablet:px-7 desktop:px-7 bg-white">
         <p className="text-lg font-semibold text-black-charcoal">{name}</p>
         <p className="mt-5 text-base font-normal text-black-charcoal">
           {description}

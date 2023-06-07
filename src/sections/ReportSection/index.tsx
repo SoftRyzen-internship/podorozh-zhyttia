@@ -14,7 +14,10 @@ const ReportSection: FC = () => {
         <p className="mt-8 text-sm w-[284px] tablet:text-lg tablet:w-[450px] tablet:mt-10 desktop:mt-12">
           {t('report.description')}
         </p>
-        <LinkButton href="#" className="mt-8 w-fit tablet:mt-10 desktop:mt-12">
+        <LinkButton
+          href="https://drive.google.com/drive/folders/1WFyEqXJ3_nfoDIB85u74G0f4pQW7WAEh"
+          className="mt-8 w-fit tablet:mt-10 desktop:mt-12"
+        >
           {t('btn.report')}
         </LinkButton>
       </div>
