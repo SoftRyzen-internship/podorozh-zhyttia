@@ -11,10 +11,10 @@ const SlideGallery: FC<TypeBanner> = ({ photo }) => {
     <div className="flex flex-col items-center">
       <div className="relative w-[320px] h-[234px] tablet:w-[336px] tablet:h-[245px] desktop:w-[384px] desktop:h-[280px]">
         <Image
-          className="absolute top-0 left-0 object-cover w-full h-full"
           src={`/images/gallery/${photo.url}.jpg`}
           alt={t(`${photo.alt}`)}
-          fill={true}
+          width={384}
+          height={280}
         />
       </div>
     </div>
