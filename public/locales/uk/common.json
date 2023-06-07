@@ -1,4 +1,7 @@
 {
+  "logo":{
+    "alt": "Логотип"
+  },
   "nav": {
     "psychological_help": "Психологічна допомога",
     "how_are_you": "Як ти?",
