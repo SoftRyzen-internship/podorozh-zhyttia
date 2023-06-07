@@ -17,12 +17,14 @@ const BookSection: FC = () => {
             <h3 className="mt-8 text-lg font-bold">{t('book.subtitle')}</h3>
             <div className="mt-8 onlyTablet:grid onlyTablet:grid-cols-2 onlyTablet:gap-8">
               <div className="desktop:w-[487px]">
-                <Trans
-                  className="text-base font-normal"
-                  components={{ 1: <p />, 2: <p className="mt-6" /> }}
-                >
-                  {t('book.description')}
-                </Trans>
+                <div className="onlyTablet:h-[264px] desktop:h-[192px]">
+                  <Trans
+                    className="text-base font-normal h-[264]"
+                    components={{ 1: <p />, 2: <p className="mt-6" /> }}
+                  >
+                    {t('book.description')}
+                  </Trans>
+                </div>
                 <p className="mt-8 font-bold desktop:mt-10">
                   {t('book.author')}
                 </p>
@@ -35,7 +37,8 @@ const BookSection: FC = () => {
                   className="w-full rounded object-cover tablet:w-[336px] tablet:h-[416px]"
                   loading="lazy"
                   src="/images/book/book_d@x2.jpg"
-                  fill
+                  width={592}
+                  height={493}
                   alt={t('book.alt')}
                 />
               </div>
@@ -46,7 +49,8 @@ const BookSection: FC = () => {
               className="object-cover rounded"
               loading="lazy"
               src="/images/book/book_d@x2.jpg"
-              fill
+              width={592}
+              height={493}
               alt={t('book.alt')}
             />
           </div>

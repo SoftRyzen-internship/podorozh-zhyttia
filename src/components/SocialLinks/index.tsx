@@ -12,7 +12,7 @@ const SocialLinks: FC = () => {
       {SOCIAL_MEDIA.map(({ label, icon: Icon, href }) => (
         <li key={label}>
           <Link
-            rel="noopener noreferrer"
+            rel="noopener noreferrer nofollow"
             aria-label={t(label) as string}
             href={href}
             target="_blank"
