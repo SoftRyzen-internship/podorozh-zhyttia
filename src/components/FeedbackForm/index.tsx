@@ -49,6 +49,8 @@ const FeedbackForm: FC = () => {
 
       if (responseData.ok) {
         setIsModalOpen(true);
+      } else {
+        throw Error();
       }
 
       reset();
