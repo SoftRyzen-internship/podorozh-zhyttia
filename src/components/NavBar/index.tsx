@@ -6,7 +6,12 @@ import NavLink from '@/components/NavLink';
 import { navLinks } from '@/constants/navLinks/navLinks';
 import { INavBarProps } from './types';
 
-const NavBar: FC<INavBarProps> = ({ className, offset = 0 }) => {
+const NavBar: FC<INavBarProps> = ({
+  className,
+  offset = 0,
+  activePatch,
+  onActivePatch,
+}) => {
   const { t } = useTranslation();
 
   return (
@@ -14,7 +19,12 @@ const NavBar: FC<INavBarProps> = ({ className, offset = 0 }) => {
       <ul className="flex gap-10 text-base">
         {navLinks.map(({ to, title }) => (
           <li key={title}>
-            <NavLink path={to} offset={-offset}>
+            <NavLink
+              isActive={activePatch === to}
+              path={to}
+              offset={-offset}
+              handleClick={() => onActivePatch(to)}
+            >
               {t(title)}
             </NavLink>
           </li>
