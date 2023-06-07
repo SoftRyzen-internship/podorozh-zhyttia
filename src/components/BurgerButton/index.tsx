@@ -6,17 +6,20 @@ import Exit from '/public/svg/exit.svg';
 
 import { IBurgerButton } from './types';
 
-const BurgerButton: FC<IBurgerButton> = ({ handleCloseModal, closeModal }) => {
+const BurgerButton: FC<IBurgerButton> = ({
+  handleToggleModal,
+  isCloseModal,
+}) => {
   const { t } = useTranslation();
 
   return (
     <button
-      onClick={handleCloseModal}
+      onClick={handleToggleModal}
       aria-label={t('modal.aria-close') as string}
       type="button"
       className="desktop:hidden focus:outline-accent"
     >
-      {closeModal ? <Exit /> : <Burger />}
+      {isCloseModal ? <Exit /> : <Burger />}
     </button>
   );
 };
