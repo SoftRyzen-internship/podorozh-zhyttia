@@ -11,10 +11,23 @@ const Header: FC = () => {
   const headerRef = useRef<HTMLElement | null>(null);
   const [offset, setOffset] = useState<number>(0);
 
-  const [closeModal, setCloseModal] = useState<boolean>(false);
-  const handleCloseModal = () => {
-    setCloseModal(!closeModal);
+  const [isCloseModal, setIsCloseModal] = useState<boolean>(false);
+
+  const handleToggleModal = () => {
+    setIsCloseModal(!isCloseModal);
   };
+
+  const handleCloseModal = () => {
+    setIsCloseModal(false);
+  };
+
+  useEffect(() => {
+    if (isCloseModal) {
+      document.body.classList.add('overflow-hidden');
+    } else {
+      document.body.classList.remove('overflow-hidden');
+    }
+  }, [isCloseModal]);
 
   useEffect(() => {
     const element = headerRef?.current;
@@ -47,15 +60,15 @@ const Header: FC = () => {
           className="hidden desktop:block desktop:ml-auto"
           offset={offset}
         />
-        {!closeModal && (
+        {!isCloseModal && (
           <LangSwitcher className="ml-auto mr-8 desktop:ml-[71px]" />
         )}
         <BurgerButton
-          handleCloseModal={handleCloseModal}
-          closeModal={closeModal}
+          handleToggleModal={handleToggleModal}
+          isCloseModal={isCloseModal}
         />
       </div>
-      {closeModal && (
+      {isCloseModal && (
         <BurgerMenu handleCloseModal={handleCloseModal} offset={offset} />
       )}
     </header>
