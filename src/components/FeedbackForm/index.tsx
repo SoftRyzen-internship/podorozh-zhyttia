@@ -47,7 +47,9 @@ const FeedbackForm: FC = () => {
 
       const responseData = await response.json();
 
-      setIsModalOpen(true);
+      if (responseData.ok) {
+        setIsModalOpen(true);
+      }
 
       reset();
     } catch (error) {
