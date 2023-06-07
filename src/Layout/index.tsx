@@ -14,11 +14,11 @@ const Layout: FC<TypeLayoutProps> = ({ children }) => {
       <Head>
         <title>{t('head.title')}</title>
         <meta name="description" content={`${t('support.description')}`} />
+        <meta property="og:title" content={`${t('head.title')}`} />
         <meta
           property="og:description"
           content={`${t('support.description')}`}
         />
-        <meta property="og:title" content={`${t('support.description')}`} />
         <meta property="og:image" content="/images/logo.png" />
       </Head>
       <Header />
