@@ -28,9 +28,11 @@ const SwiftTab: FC = () => {
         <p className={s.text}>PBANUA2X </p>
 
         <h4 className={s.title}>Company address:</h4>
-        <p className={`${s.text} ${s.itemGap}`}>{t('donate.address')}</p>
+        <p className={`${s.text}`}>{t('donate.address')}</p>
 
-        <h4 className={s.title}>Account in the correspondent bank</h4>
+        <h4 className={`${s.title} ${s.itemGap}`}>
+          Account in the correspondent bank
+        </h4>
         <p className={s.text}>400886700401</p>
 
         <h4 className={s.title}>SWIFT Code of the correspondent bank</h4>
@@ -63,9 +65,11 @@ const SwiftTab: FC = () => {
         <p className={s.text}>PBANUA2X </p>
 
         <h4 className={s.title}>Company address:</h4>
-        <p className={`${s.text} ${s.itemGap}`}>{t('donate.address')}</p>
+        <p className={`${s.text}`}>{t('donate.address')}</p>
 
-        <h4 className={s.title}>Account in the correspondent bank</h4>
+        <h4 className={`${s.title} ${s.itemGap}`}>
+          Account in the correspondent bank
+        </h4>
         <p className={s.text}>001-1-000080</p>
 
         <h4 className={s.title}>SWIFT Code of the correspondent bank</h4>

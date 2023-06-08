@@ -11,6 +11,6 @@
     @apply text-xs small:text-base tablet:text-sm desktop:text-lg leading-7 font-normal mt-2 tablet:mt-3;
   }
   .itemGap {
-    @apply mb-8 tablet:mb-10 desktop:mb-20;
+    @apply mt-8 tablet:mt-10 desktop:mt-20;
   }
 }
