@@ -20,7 +20,7 @@ const FeedbackForm: FC = () => {
     handleSubmit,
     formState: { errors },
     reset,
-  } = useForm<TypeFormValues>({ mode: 'onChange' });
+  } = useForm<TypeFormValues>();
 
   const onSubmit: SubmitHandler<TypeFormValues> = async data => {
     if (isSending) {
