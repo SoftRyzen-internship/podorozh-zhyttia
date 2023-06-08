@@ -8,9 +8,10 @@ import { IHeroProps } from './types';
 
 import s from './HeroSection.module.css';
 
-const HeroSection: FC<IHeroProps> = ({ allBanners }) => {
+const HeroSection: FC<IHeroProps> = ({ banner }) => {
   const { t } = useTranslation();
-  const { photo } = allBanners[0];
+
+  const { photo } = banner;
 
   return (
     <section

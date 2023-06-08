@@ -10,12 +10,12 @@ export const DATO_CMS_QUERY = `query PSYCHOLOGIST($_locale: SiteLocale, $_first:
       height
     }
   }
-  allBanners(locale: $_locale) {
+  banner(locale: $_locale) {
     id
     title
     photo {
-      url
       alt
+      url
       width
       height
     }
