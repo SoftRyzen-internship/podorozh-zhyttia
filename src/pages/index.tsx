@@ -19,17 +19,18 @@ import GallerySection from '@/sections/GallerySection';
 type TypeHomeProps = {
   data: {
     allPsychologists: TypePsychologist[];
-    allBanners: TypeBanner[];
+    banner: TypeBanner;
   };
 };
 
 const Home: FC<TypeHomeProps> = ({ data }) => {
-  const { allPsychologists, allBanners } = data;
+  const { allPsychologists, banner } = data;
+
   const { t } = useTranslation('common');
 
   return (
     <>
-      <HeroSection allBanners={allBanners} />
+      <HeroSection banner={banner} />
       <MentalSupportSection allPsychologists={allPsychologists} />
       <DonateSection />
       <FundSupportSection />
