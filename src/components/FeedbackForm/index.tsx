@@ -63,7 +63,7 @@ const FeedbackForm: FC = () => {
 
   return (
     <form
-      className="w-full tablet:w-[335px] desktop:w-[487px] flex flex-col max-w-full w-120 gap-7"
+      className="w-full mt-10 tablet:w-[335px] tablet:mt-0 desktop:w-[487px] desktop:mt-0 flex flex-col max-w-full w-120 gap-7"
       onSubmit={handleSubmit(onSubmit)}
       noValidate
     >

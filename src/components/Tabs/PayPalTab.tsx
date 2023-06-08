@@ -27,10 +27,10 @@ const PayPalTab: FC = () => {
 
   return (
     <article className="tablet:flex tablet:justify-between tablet:items-baseline py-7 px-5 tablet:pt-10 tablet:pl-8 tablet:pr-[89px] tablet:pb-[124px] desktop:p-[60px] desktop:pr-[544px] desktop:pb-[152px] text-black-charcoal bg-white-light shadow-payment">
-      <h3 className="text-sm left-7 font-bold desktop:text-lg mb-3">
+      <h3 className="text-sm left-7 font-bold desktop:text-lg">
         PayPal {t('donate.box')}:
       </h3>
-      <div className="relative flex items-center justify-between tablet:w-[355px] desktop:w-[384px] p-3 small:pl-4 small:pr-5 bg-yellow rounded">
+      <div className="relative flex items-center justify-between tablet:w-[355px] desktop:w-[384px] p-3 small:pl-4 small:pr-5 bg-yellow rounded  onlyMobile:mt-3">
         <p className="text-tiny small:text-xs tablet:text-sm desktop:text-lg left-7 font-semibold">
           chepurko.larysa@gmail.com
         </p>
