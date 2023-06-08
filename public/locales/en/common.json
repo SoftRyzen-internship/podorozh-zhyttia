@@ -63,7 +63,7 @@
       "name_required": "*The name field is required",
       "name_min": "*Minimum 2 characters",
       "name_max": "*Maximum 70 characters",
-      "name_format": "*Use letters, spaces, dashes.",
+      "name_format": "*Use only letters, spaces, dashes.",
       "phone_required": "*The phone field is required",
       "phone_format": "*Phone number format: +380XXXXXXXXX",
       "textarea": "Maximum 500 characters",
