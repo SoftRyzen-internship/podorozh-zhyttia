@@ -3,12 +3,13 @@ import Link from 'next/link';
 import { useTranslation } from 'next-i18next';
 
 import { SOCIAL_MEDIA } from './constants';
+import { TypeSocialLinksProps } from './types';
 
-const SocialLinks: FC = () => {
+const SocialLinks: FC<TypeSocialLinksProps> = ({ className }) => {
   const { t } = useTranslation();
 
   return (
-    <ul className="flex gap-5">
+    <ul className={`flex gap-5 ${className}`}>
       {SOCIAL_MEDIA.map(({ label, icon: Icon, href }) => (
         <li key={label}>
           <Link

@@ -9,10 +9,10 @@ const Address: FC<typeAddressProps> = ({ className }) => {
 
   return (
     <div className={`${className}`}>
-      <h3 className="text-lg text-accent font-bold leading-7 mb-7">
+      <h3 className="text-lg text-accent font-bold leading-7">
         {t('footer.contacts')}
       </h3>
-      <address>
+      <address className="mt-7">
         <ul className="flex flex-col gap-5">
           <li>
             <Link

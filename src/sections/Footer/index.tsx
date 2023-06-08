@@ -17,10 +17,10 @@ const Footer: FC = () => {
         </div>
         <Address className="mt-10 onlyTablet:w-1/2 tablet:mt-0  onlyTablet:order-1 desktop:mr-[262px]" />
         <div className="mt-10 onlyTablet:w-1/2  desktop:mt-0">
-          <h3 className="text-lg font-bold leading-7 text-accent mb-7">
+          <h3 className="text-lg font-bold leading-7 text-accent">
             {t('footer.social')}
           </h3>
-          <SocialLinks />
+          <SocialLinks className={'mt-7'} />
         </div>
       </div>
     </footer>
