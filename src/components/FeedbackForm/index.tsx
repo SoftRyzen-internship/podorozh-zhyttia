@@ -81,6 +81,10 @@ const FeedbackForm: FC = () => {
             value: 70,
             message: `${t('form.error.name_max')}`,
           },
+          pattern: {
+            value: /^[\p{L}\s'-]+$/u,
+            message: t('form.error.name_format'),
+          },
         })}
         error={errors?.name?.message}
       />
