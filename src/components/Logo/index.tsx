@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Link } from 'react-scroll';
+import Link from 'next/link';
 import Image from 'next/image';
 
 import { useTranslation } from 'next-i18next';
@@ -13,11 +13,7 @@ const Logo: FC<ILogoProps> = ({ className }) => {
   return (
     <Link
       className={`block relative cursor-pointer hover:scale-110 ${className} focus:outline-accent`}
-      to="#hero"
-      smooth={true}
-      spy={true}
-      duration={500}
-      tabIndex={0}
+      href={'/'}
     >
       <Image
         className="object-contain"
