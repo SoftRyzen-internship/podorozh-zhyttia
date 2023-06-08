@@ -1,13 +1,23 @@
-import { FC } from 'react';
+import { FC, useState } from 'react';
 import Head from 'next/head';
 import { useTranslation } from 'next-i18next';
 
 import { TypeLayoutProps } from '@/Layout/types';
+
 import Header from '@/sections/Header';
 import Footer from '@/sections/Footer';
 
 const Layout: FC<TypeLayoutProps> = ({ children }) => {
+  const [activePath, setActivePath] = useState<string | null>(null);
   const { t } = useTranslation();
+
+  const handleActivePath = (path: string) => {
+    setActivePath(path);
+  };
+
+  const handleLogoClick = () => {
+    setActivePath(null);
+  };
 
   return (
     <>
@@ -21,9 +31,13 @@ const Layout: FC<TypeLayoutProps> = ({ children }) => {
         />
         <meta property="og:image" content="/images/logo.png" />
       </Head>
-      <Header />
+      <Header
+        activePath={activePath}
+        handleActivePath={handleActivePath}
+        handleLogoClick={handleLogoClick}
+      />
       <main>{children}</main>
-      <Footer />
+      <Footer handleLogoClick={handleLogoClick} />
     </>
   );
 };
