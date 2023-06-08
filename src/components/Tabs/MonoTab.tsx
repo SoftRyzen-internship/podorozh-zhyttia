@@ -16,7 +16,7 @@ const MonoTab: FC = () => {
         rel="noopener noreferrer nofollow"
         className="group focus:outline-accent focus:outline-offset-4"
       >
-        <div className="tablet:w-[392px] desktop:w-[425px] flex items-center justify-between mb-10 tablet:mb-0 py-3 pl-5 pr-[23px] bg-yellow rounded">
+        <div className="tablet:w-[392px] desktop:w-[425px] flex items-center justify-between py-3 pl-5 pr-[23px] bg-yellow rounded">
           <p className="w-[150px] tablet:w-auto text-base tablet:text-sm desktop:text-lg leading-7 font-normal">
             {t('donate.link')}
           </p>
@@ -26,8 +26,7 @@ const MonoTab: FC = () => {
           />
         </div>
       </Link>
-
-      <div className="max-w-[280px] max-h-[280px] tablet:w-[152px] tablet:h-[152px] desktop:w-[200px] desktop:h-[200px] mx-auto tablet:mx-0">
+      <div className="max-w-[280px] max-h-[280px] onlyMobile:mt-10 tablet:w-[152px] tablet:h-[152px] desktop:w-[200px] desktop:h-[200px] mx-auto tablet:mx-0">
         <MonoQR aria-label={t('donate.aria-monoQR')} />
       </div>
     </article>

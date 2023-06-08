@@ -15,14 +15,14 @@ const Tabs: FC = () => {
     <Tab.Group>
       <Tab.List
         as="ul"
-        className="grid grid-cols-2 desktop:grid-cols-4 gap-5 tablet:gap-8 mt-8 tablet:mt-10 desktop:mt-[60px] mb-10 tablet:mb-[60px]"
+        className="grid grid-cols-2 desktop:grid-cols-4 gap-5 tablet:gap-8 mt-8 tablet:mt-10 desktop:mt-[60px]"
       >
         <TabButton>{t('donate.private24')}</TabButton>
         <TabButton>Mono</TabButton>
         <TabButton>SWIFT</TabButton>
         <TabButton>PayPal</TabButton>
       </Tab.List>
-      <Tab.Panels>
+      <Tab.Panels className="mt-10 tablet:mt-[60px] desktop:mt-[60px]">
         <Tab.Panel className={'focus:outline-accent'}>
           <PrivatTab />
         </Tab.Panel>

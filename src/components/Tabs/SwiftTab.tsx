@@ -7,12 +7,12 @@ const SwiftTab: FC = () => {
   const { t } = useTranslation();
   return (
     <article className="desktop:flex desktop:gap-24 py-7 px-5 tablet:py-11 tablet:px-8 desktop:p-[60px] text-black-charcoal bg-white-light shadow-payment">
-      <div className="mb-[82px] tablet:mb-[60px] desktop:mb-0">
-        <h3 className="text-lg tablet:text-xl desktop:text-2xl leading-7 tablet:leading-8 font-bold mb-6 desktop:mb-10">
+      <div>
+        <h3 className="text-lg tablet:text-xl desktop:text-2xl leading-7 tablet:leading-8 font-bold">
           € <span className="text-accent">EUR</span>
         </h3>
 
-        <h4 className={s.title}>Company name:</h4>
+        <h4 className={s.companyName}>Company name:</h4>
         <p className={s.text}>{t('donate.company')}</p>
 
         <h4 className={s.title}>IBANCode:</h4>
@@ -37,17 +37,17 @@ const SwiftTab: FC = () => {
         <p className={s.text}>COBADEFF</p>
 
         <h4 className={s.title}>Correspondent bank</h4>
-        <p className={`${s.text} ${s.lastItem}`}>
+        <p className={`${s.text}`}>
           Commerzbank AG, Frankfurt am Main, Germany
         </p>
       </div>
 
-      <div>
-        <h3 className="text-lg tablet:text-xl desktop:text-2xl leading-7 tablet:leading-8 font-bold mb-6 desktop:mb-10">
+      <div className="mt-[82px] tablet:mt-[60px] desktop:mt-0">
+        <h3 className="text-lg tablet:text-xl desktop:text-2xl leading-7 tablet:leading-8 font-bold">
           $ <span className="text-accent">USD</span>
         </h3>
 
-        <h4 className={s.title}>Company name:</h4>
+        <h4 className={s.companyName}>Company name:</h4>
         <p className={s.text}>{t('donate.company')}</p>
 
         <h4 className={s.title}>IBANCode:</h4>
@@ -72,9 +72,7 @@ const SwiftTab: FC = () => {
         <p className={s.text}>CHASUS33</p>
 
         <h4 className={s.title}>Correspondent bank</h4>
-        <p className={`${s.text} ${s.lastItem}`}>
-          JP Morgan Chase Bank, New York ,USA
-        </p>
+        <p className={`${s.text}`}>JP Morgan Chase Bank, New York ,USA</p>
       </div>
     </article>
   );
