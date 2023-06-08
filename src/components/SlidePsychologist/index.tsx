@@ -12,14 +12,14 @@ const SlidePsychologist: FC<TypePsychologist> = ({
     <div className="flex flex-col items-center">
       <div className="relative w-full h-[350px] tablet:w-[336px] tablet:h-[350px] desktop:w-[384px] desktop:h-[400px]">
         <Image
-          className="object-cover object-top"
           src={psychologistPhoto.url}
           alt={name}
-          fill={true}
+          width={psychologistPhoto.width}
+          height={psychologistPhoto.height}
+          className="object-cover object-top h-full w-full"
         />
       </div>
-
-      <div className="h-[180px] flex flex-col py-7 px-5 tablet:px-7 desktop:px-7 bg-white">
+      <div className="small:h-[180px] flex flex-col py-7 px-5 tablet:px-7 desktop:px-7 bg-white">
         <p className="text-lg font-semibold text-black-charcoal">{name}</p>
         <p className="mt-5 text-base font-normal text-black-charcoal">
           {description}

@@ -1,4 +1,4 @@
 export interface IBurgerButton {
-  handleCloseModal: () => void;
-  closeModal: boolean;
+  handleToggleModal: () => void;
+  isCloseModal: boolean;
 }

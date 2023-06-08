@@ -4,6 +4,7 @@ import { Link } from 'react-scroll';
 import { NavLinkProps } from './types';
 
 const NavLink: FC<NavLinkProps> = ({
+  isActive,
   path,
   children,
   offset = 0,
@@ -13,12 +14,16 @@ const NavLink: FC<NavLinkProps> = ({
     <Link
       tabIndex={0}
       to={path}
+      href={path}
       smooth={true}
-      spy={true}
       duration={500}
       offset={offset}
-      className="block text-lg font-normal leading-7 transition-colors cursor-pointer desktop:text-base desktop:leading-normal text-black-charcoal hover:text-accent focus:text-accent focus:outline-accent focus:outline-offset-4"
-      onClick={handleClick}
+      className={`${
+        isActive ? 'text-accent' : 'text-black-charcoal'
+      } block text-lg font-normal leading-7 transition-colors cursor-pointer desktop:text-base desktop:leading-normal hover:text-accent focus:outline-accent focus:outline-offset-4`}
+      onClick={() => {
+        handleClick && handleClick(path);
+      }}
     >
       {children}
     </Link>

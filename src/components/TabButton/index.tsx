@@ -8,6 +8,7 @@ const TabButton: FC<ITabButtonProps> = ({ children }) => {
     <Tab as="li" className="focus:outline-none">
       {({ selected }) => (
         <button
+          type="button"
           className={`${
             selected
               ? 'bg-accent text-white hover:bg-accent-dark focus:bg-accent-dark'

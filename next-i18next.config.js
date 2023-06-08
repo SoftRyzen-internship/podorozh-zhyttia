@@ -4,5 +4,6 @@ module.exports = {
     defaultLocale: 'uk',
     locales: ['en', 'uk'],
     reloadOnPrerender: true,
+    localeDetection: false,
   },
 };

@@ -1,8 +1,9 @@
 import { ReactNode } from 'react';
 
 export interface NavLinkProps {
+  isActive: boolean;
   path: string;
   children: ReactNode;
   offset?: number;
-  handleClick?: () => void;
+  handleClick?: (patch: string) => void;
 }

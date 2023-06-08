@@ -29,7 +29,9 @@ const FeedbackForm: FC = () => {
 
     try {
       setIsSending(true);
-      const message = `Name: ${data.name}\nPhone: ${data.phone}\nCommentary: ${data.commentary}`;
+      const message = `Name: ${data.name}\nPhone: ${
+        data.phone
+      }\nCommentary: ${data.commentary.slice(0, 500)}`;
       const response = await fetch(
         `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_BOT_TOKEN}/sendMessage`,
         {
@@ -45,7 +47,11 @@ const FeedbackForm: FC = () => {
 
       const responseData = await response.json();
 
-      setIsModalOpen(true);
+      if (responseData.ok) {
+        setIsModalOpen(true);
+      } else {
+        throw Error();
+      }
 
       reset();
     } catch (error) {
@@ -57,7 +63,7 @@ const FeedbackForm: FC = () => {
 
   return (
     <form
-      className="w-full tablet:w-[335px] desktop:w-[487px] flex flex-col max-w-full w-120 gap-7"
+      className="w-full mt-10 tablet:w-[335px] tablet:mt-0 desktop:w-[487px] desktop:mt-0 flex flex-col max-w-full w-120 gap-7"
       onSubmit={handleSubmit(onSubmit)}
       noValidate
     >
@@ -66,10 +72,14 @@ const FeedbackForm: FC = () => {
         id="inline-name"
         placeholder={t('form.name')}
         register={register('name', {
-          required: `${t('form.error.name')}`,
+          required: `${t('form.error.name_required')}`,
           minLength: {
-            value: 3,
-            message: `${t('form.error.name')}`,
+            value: 2,
+            message: `${t('form.error.name_min')}`,
+          },
+          maxLength: {
+            value: 70,
+            message: `${t('form.error.name_max')}`,
           },
         })}
         error={errors?.name?.message}
@@ -79,10 +89,10 @@ const FeedbackForm: FC = () => {
         id="inline-phone"
         placeholder={t('form.phone')}
         register={register('phone', {
-          required: `${t('form.error.phone')}`,
+          required: `${t('form.error.phone_required')}`,
           pattern: {
-            value: /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/,
-            message: t('form.error.phone'),
+            value: /^\+380\d{9}$/,
+            message: t('form.error.phone_format'),
           },
         })}
         error={errors?.phone?.message}
@@ -91,7 +101,12 @@ const FeedbackForm: FC = () => {
         label={t('form.aria.message')}
         id="inline-commentary"
         placeholder={t('form.comment')}
-        register={register('commentary')}
+        register={register('commentary', {
+          maxLength: {
+            value: 500,
+            message: `${t('form.error.textarea')}`,
+          },
+        })}
         error={errors?.commentary?.message}
         rows={6}
       />

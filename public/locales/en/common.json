@@ -1,4 +1,7 @@
 {
+  "logo": {
+    "alt": "Logo"
+  },
   "nav": {
     "psychological_help": "Psychological help",
     "how_are_you": "How are you?",
@@ -35,7 +38,9 @@
     "aria-copy": "Copy to clipboard",
     "aria-copiedCard": "The card number has been copied",
     "aria-copiedBox": "The box has been copied",
-    "aria-goTo": "Go to the transfer page"
+    "aria-goTo": "Go to the transfer page",
+    "aria-privatQR": "PrivatBank QR",
+    "aria-monoQR": "MonoBank QR"
   },
   "support": {
     "title": "Donate",
@@ -55,15 +60,19 @@
     "phone": "Phone",
     "comment": "Comment",
     "error": {
-      "name": "*Check that the data is entered correctly",
-      "phone": "*Phone number format: +380XXXXXXXXXX",
+      "name_required": "*The name field is required",
+      "name_min": "*Minimum 2 characters",
+      "name_max": "*Maximum 70 characters",
+      "phone_required": "*The phone field is required",
+      "phone_format": "*Phone number format: +380XXXXXXXXX",
+      "textarea": "Maximum 500 characters",
       "message": "Error while sending the message."
     },
     "success": "Your message has been sent successfully",
     "aria": {
       "name": "Name input field",
       "phone": "Phone number input field",
-      "message": "Comment input field"
+      "message": "Error occurred while sending the message"
     }
   },
   "book": {

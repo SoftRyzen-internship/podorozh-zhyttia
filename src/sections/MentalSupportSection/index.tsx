@@ -45,7 +45,9 @@ const MentalSupportSection: FC<MentalSupportSectionProps> = ({
           )}
         </Slider>
         <div className="mt-10 desktop:mt-[60px] flex justify-center">
-          <ScrollLink path="#feedback">{t('btn.talk')}</ScrollLink>
+          <ScrollLink path="#feedback" offset={-50}>
+            {t('btn.talk')}
+          </ScrollLink>
         </div>
       </div>
     </section>

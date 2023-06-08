@@ -14,7 +14,7 @@ const FeedbackDescription: FC = () => {
   });
 
   return (
-    <div className="w-full mb-10 tablet:mb-0 tablet:w-[350px] desktop:w-[500px]">
+    <div className="w-full tablet:w-[350px] desktop:w-[500px]">
       <Heading>{t('feedback.title')}</Heading>
       <ul className="mt-8 tablet:mt-10 desktop:mt-12 flex flex-col gap-5 tablet:w-[330px] desktop:w-[410px]">
         {Object.values(steps).map((step, i) => (

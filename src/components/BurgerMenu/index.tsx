@@ -8,6 +8,8 @@ import { TypeNavigationLink } from '@/constants/navLinks/types';
 import { TypeBurgerMenuProps } from './types';
 
 const BurgerMenu: FC<TypeBurgerMenuProps> = ({
+  activePatch,
+  onActivePatch,
   handleCloseModal,
   offset = 0,
 }) => {
@@ -17,6 +19,11 @@ const BurgerMenu: FC<TypeBurgerMenuProps> = ({
     if (e.target === e.currentTarget) {
       handleCloseModal();
     }
+  };
+
+  const handleLinkClick = (to: string) => {
+    onActivePatch(to);
+    handleCloseModal();
   };
 
   return (
@@ -34,9 +41,10 @@ const BurgerMenu: FC<TypeBurgerMenuProps> = ({
                   className="mt-5 pb-2 border-b-[1px] border-b-accent text-lg text-black-charcoal hover:text-accent"
                 >
                   <NavLink
+                    isActive={activePatch === to}
                     path={to}
                     offset={-offset}
-                    handleClick={handleCloseModal}
+                    handleClick={() => handleLinkClick(to)}
                   >
                     {t(title)}
                   </NavLink>
