@@ -28,7 +28,7 @@ const MonoTab: FC = () => {
       </Link>
 
       <div className="max-w-[280px] max-h-[280px] tablet:w-[152px] tablet:h-[152px] desktop:w-[200px] desktop:h-[200px] mx-auto tablet:mx-0">
-        <MonoQR />
+        <MonoQR aria-label={t('donate.aria-monoQR')} />
       </div>
     </article>
   );
