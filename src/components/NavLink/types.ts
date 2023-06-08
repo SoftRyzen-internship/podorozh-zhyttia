@@ -5,5 +5,5 @@ export interface NavLinkProps {
   path: string;
   children: ReactNode;
   offset?: number;
-  handleClick?: (patch: string) => void;
+  handleClick?: (path: string) => void;
 }

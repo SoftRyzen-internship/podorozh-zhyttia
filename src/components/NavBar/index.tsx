@@ -9,8 +9,8 @@ import { INavBarProps } from './types';
 const NavBar: FC<INavBarProps> = ({
   className,
   offset = 0,
-  activePatch,
-  onActivePatch,
+  activePath,
+  onActivePath,
 }) => {
   const { t } = useTranslation();
 
@@ -20,10 +20,10 @@ const NavBar: FC<INavBarProps> = ({
         {navLinks.map(({ to, title }) => (
           <li key={title}>
             <NavLink
-              isActive={activePatch === to}
+              isActive={activePath === to}
               path={to}
               offset={-offset}
-              handleClick={() => onActivePatch(to)}
+              handleClick={() => onActivePath(to)}
             >
               {t(title)}
             </NavLink>

@@ -64,8 +64,8 @@ const Header: FC<TypeHeaderProps> = ({
         <NavBar
           className="hidden desktop:block desktop:ml-auto"
           offset={offset}
-          activePatch={activePath}
-          onActivePatch={handleActivePath}
+          activePath={activePath}
+          onActivePath={handleActivePath}
         />
         {!isCloseModal && (
           <LangSwitcher className="ml-auto mr-8 desktop:ml-[71px]" />
@@ -77,8 +77,8 @@ const Header: FC<TypeHeaderProps> = ({
       </div>
       {isCloseModal && (
         <BurgerMenu
-          activePatch={activePath}
-          onActivePatch={handleActivePath}
+          activePath={activePath}
+          onActivePath={handleActivePath}
           handleCloseModal={handleToggleModal}
           offset={offset}
         />
