@@ -44,7 +44,10 @@ const PayPalTab: FC = () => {
             )}
           </div>
         ) : (
-          <button className="focus:outline-accent focus:outline-offset-4">
+          <button
+            type="button"
+            className="focus:outline-accent focus:outline-offset-4"
+          >
             <Clipboard
               aria-label={t('donate.aria-copy')}
               className="cursor-pointer fill-accent hover:fill-accent-dark focus:fill-accent-dark"

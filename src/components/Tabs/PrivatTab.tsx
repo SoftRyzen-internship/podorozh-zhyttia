@@ -49,7 +49,10 @@ const PrivatTab: FC = () => {
                 )}
               </div>
             ) : (
-              <button className="focus:outline-accent focus:outline-offset-4">
+              <button
+                type="button"
+                className="focus:outline-accent focus:outline-offset-4"
+              >
                 <Clipboard
                   aria-label={t('donate.aria-copy')}
                   className="cursor-pointer fill-accent hover:fill-accent-dark focus:fill-accent-dark"
@@ -77,7 +80,7 @@ const PrivatTab: FC = () => {
         </Link>
       </div>
       <div className="onlyMobile:mt-10 max-w-[280px] max-h-[280px] tablet:w-[152px] tablet:h-[152px] desktop:w-[200px] desktop:h-[200px] mx-auto tablet:mx-0">
-        <PrivatQR />
+        <PrivatQR aria-label={t('donate.aria-privatQR')} />
       </div>
     </article>
   );
