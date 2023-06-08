@@ -27,7 +27,7 @@ const PayPalTab: FC = () => {
 
   return (
     <article className="tablet:flex tablet:justify-between tablet:items-baseline py-7 px-5 tablet:pt-10 tablet:pl-8 tablet:pr-[89px] tablet:pb-[124px] desktop:p-[60px] desktop:pr-[544px] desktop:pb-[152px] text-black-charcoal bg-white-light shadow-payment">
-      <h3 className="text-sm left-7 font-bold desktop:text-lg mb-3">
+      <h3 className="text-sm left-7 font-bold desktop:text-lg onlyMobile:mb-3">
         PayPal {t('donate.box')}:
       </h3>
       <div className="relative flex items-center justify-between tablet:w-[355px] desktop:w-[384px] p-3 small:pl-4 small:pr-5 bg-yellow rounded">
@@ -44,7 +44,10 @@ const PayPalTab: FC = () => {
             )}
           </div>
         ) : (
-          <button className="focus:outline-accent focus:outline-offset-4">
+          <button
+            type="button"
+            className="focus:outline-accent focus:outline-offset-4"
+          >
             <Clipboard
               aria-label={t('donate.aria-copy')}
               className="cursor-pointer fill-accent hover:fill-accent-dark focus:fill-accent-dark"

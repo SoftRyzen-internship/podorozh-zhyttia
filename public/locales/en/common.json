@@ -38,7 +38,9 @@
     "aria-copy": "Copy to clipboard",
     "aria-copiedCard": "The card number has been copied",
     "aria-copiedBox": "The box has been copied",
-    "aria-goTo": "Go to the transfer page"
+    "aria-goTo": "Go to the transfer page",
+    "aria-privatQR": "PrivatBank QR",
+    "aria-monoQR": "MonoBank QR"
   },
   "support": {
     "title": "Donate",
