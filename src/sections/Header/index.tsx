@@ -9,10 +9,14 @@ import BurgerMenu from '@/components/BurgerMenu';
 
 const Header: FC = () => {
   const headerRef = useRef<HTMLElement | null>(null);
-
+  const [windowWidth, setWindowWidth] = useState(0);
   const [offset, setOffset] = useState<number>(0);
-  const [isCloseModal, setIsCloseModal] = useState<boolean>(false);
+  const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
   const [activePath, setActivePath] = useState<string | null>(null);
+
+  const handleWindowResize = () => {
+    setWindowWidth(window.innerWidth);
+  };
 
   const handleActivePath = (path: string) => {
     setActivePath(path);
@@ -20,20 +24,44 @@ const Header: FC = () => {
   };
 
   const handleToggleModal = () => {
-    setIsCloseModal(!isCloseModal);
-  };
+    setIsOpenModal(!isOpenModal);
 
-  const handleCloseModal = () => {
-    setIsCloseModal(false);
-  };
-
-  useEffect(() => {
-    if (isCloseModal) {
+    if (!isOpenModal) {
       document.body.classList.add('overflow-hidden');
     } else {
       document.body.classList.remove('overflow-hidden');
     }
-  }, [isCloseModal]);
+  };
+
+  const handleCloseModal = () => {
+    setIsOpenModal(false);
+  };
+
+  useEffect(() => {
+    return () => {
+      document.body.classList.remove('overflow-hidden');
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleWindowResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    handleWindowResize();
+    window.addEventListener('resize', handleWindowResize);
+
+    return () => {
+      window.removeEventListener('resize', handleWindowResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (windowWidth > 1280) {
+      setIsOpenModal(false);
+      document.body.classList.remove('overflow-hidden');
+    }
+  }, [windowWidth]);
 
   useEffect(() => {
     const element = headerRef?.current;
@@ -68,15 +96,15 @@ const Header: FC = () => {
           className="hidden desktop:block desktop:ml-auto"
           offset={offset}
         />
-        {!isCloseModal && (
+        {!isOpenModal && (
           <LangSwitcher className="ml-auto mr-8 desktop:ml-[71px]" />
         )}
         <BurgerButton
           handleToggleModal={handleToggleModal}
-          isCloseModal={isCloseModal}
+          isOpenModal={isOpenModal}
         />
       </div>
-      {isCloseModal && (
+      {isOpenModal && (
         <BurgerMenu
           activePatch={activePath}
           onActivePatch={setActivePath}
