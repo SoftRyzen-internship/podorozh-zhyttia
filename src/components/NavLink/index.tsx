@@ -14,6 +14,7 @@ const NavLink: FC<NavLinkProps> = ({
     <Link
       tabIndex={0}
       to={path}
+      href={path}
       smooth={true}
       duration={500}
       offset={offset}

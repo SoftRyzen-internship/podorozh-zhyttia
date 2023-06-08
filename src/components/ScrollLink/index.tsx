@@ -8,6 +8,7 @@ const ScrollLink: FC<ScrollLinkProps> = ({ path, children, offset = 0 }) => {
     <Link
       tabIndex={0}
       to={path}
+      href={path}
       smooth={true}
       spy={true}
       duration={500}
