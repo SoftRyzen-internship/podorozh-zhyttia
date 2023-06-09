@@ -1,9 +1,9 @@
 import { FC, useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
 import Clipboard from 'public/svg/clipboard.svg';
-import PrivatQR from 'public/svg/privatQR.svg';
 import Arrow from 'public/svg/arrow.svg';
 import Tick from 'public/svg/tick.svg';
 
@@ -80,7 +80,12 @@ const PrivatTab: FC = () => {
         </Link>
       </div>
       <div className="onlyMobile:mt-10 max-w-[280px] max-h-[280px] tablet:w-[152px] tablet:h-[152px] desktop:w-[200px] desktop:h-[200px] mx-auto tablet:mx-0">
-        <PrivatQR aria-label={t('donate.aria-privatQR')} />
+        <Image
+          src="/images/tabs/privatQR@2x.png"
+          alt={t('donate.aria-privatQR')}
+          width={280}
+          height={280}
+        />
       </div>
     </article>
   );
