@@ -29,6 +29,11 @@ const Header: FC<TypeHeaderProps> = ({
     }
   };
 
+  const handleClickOnLogo = () => {
+    handleLogoClick();
+    setIsOpenModal(false);
+  };
+
   useEffect(() => {
     return () => {
       document.body.classList.remove('overflow-hidden');
@@ -82,7 +87,7 @@ const Header: FC<TypeHeaderProps> = ({
       <div className="container flex items-center justify-between py-[7px] tablet:py-[1.5px]">
         <Logo
           className="w-[77px] h-[50px] tablet:w-[111px] tablet:h-[77px]"
-          handleClick={handleLogoClick}
+          handleClick={handleClickOnLogo}
         />
 
         <NavBar
