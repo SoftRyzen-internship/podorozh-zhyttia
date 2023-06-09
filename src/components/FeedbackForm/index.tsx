@@ -29,9 +29,9 @@ const FeedbackForm: FC = () => {
 
     try {
       setIsSending(true);
-      const message = `Name: ${data.name}\nPhone: ${
+      const message = `Name: ${data.name.trim()}\nPhone: ${
         data.phone
-      }\nCommentary: ${data.commentary.slice(0, 500)}`;
+      }\nCommentary: ${data.commentary.trim()}`;
       const response = await fetch(
         `https://api.telegram.org/bot${process.env.NEXT_PUBLIC_BOT_TOKEN}/sendMessage`,
         {
@@ -73,17 +73,30 @@ const FeedbackForm: FC = () => {
         placeholder={t('form.name')}
         register={register('name', {
           required: `${t('form.error.name_required')}`,
-          minLength: {
-            value: 2,
-            message: `${t('form.error.name_min')}`,
-          },
           maxLength: {
             value: 70,
             message: `${t('form.error.name_max')}`,
           },
-          pattern: {
-            value: /^[\p{L}\s'-]+$/u,
-            message: t('form.error.name_format'),
+          validate: {
+            noSymbol: (value: string) => {
+              if (/^[\p{L}\s'-]+$/u.test(value)) {
+                return undefined;
+              }
+              return `${t('form.error.name_format')}`;
+            },
+            OnlySpaces: (value: string) => {
+              if (!/^\s+$/.test(value)) {
+                return undefined;
+              }
+              return `${t('form.error.name_space')}`;
+            },
+            minLengthOnlyLetters: (value: string) => {
+              const trimmedValue = value.replace(/[\s-]+/g, '');
+              if (trimmedValue.length >= 2) {
+                return undefined;
+              }
+              return `${t('form.error.name_min')}`;
+            },
           },
         })}
         error={errors?.name?.message}
