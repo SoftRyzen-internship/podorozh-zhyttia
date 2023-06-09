@@ -6,21 +6,26 @@ import SocialLinks from '@/components/SocialLinks';
 import Address from '@/components/Address';
 import Logo from '@/components/Logo';
 
-const Footer: FC = () => {
+import { TypeFooterProps } from './types';
+
+const Footer: FC<TypeFooterProps> = ({ handleLogoClick }) => {
   const { t } = useTranslation();
 
   return (
     <footer id="#contacts" className="pt-10 pb-5 tablet:py-[60px]">
-      <div className="container relative flex flex-col items-center justify-between text-center tablet:text-left onlyTablet:flex-wrap tablet:flex-row onlyTablet:items-end desktop:items-start desktop:gap-8">
-        <div className="desktop:w-1/3 onlyTablet:absolute onlyTablet:top-0 onlyTablet:left-8">
-          <Logo className="w-[100px] h-[65px] desktop:w-[154px] desktop:h-[100px]" />
+      <div className="container relative flex flex-col items-center  text-center tablet:text-left tablet:flex-row onlyTablet:items-end desktop:items-start onlyTablet:gap-8">
+        <div className=" onlyTablet:absolute onlyTablet:top-0 onlyTablet:left-8 desktop:mr-[262px]">
+          <Logo
+            className="w-[100px] h-[65px] desktop:w-[154px] desktop:h-[100px]"
+            handleClick={handleLogoClick}
+          />
         </div>
-        <Address className="mt-10 tablet:w-1/2 tablet:pl-4 tablet:mt-0 desktop:w-1/3 onlyTablet:order-1" />
-        <div className="mt-10 desktop:w-1/3 desktop:mt-0 desktop:pl-[104px]">
-          <h3 className="text-lg font-bold leading-7 text-accent mb-7">
+        <Address className="mt-10 onlyTablet:w-1/2 tablet:mt-0  onlyTablet:order-1 desktop:mr-[262px]" />
+        <div className="mt-10 onlyTablet:w-1/2  desktop:mt-0">
+          <h3 className="text-lg font-bold leading-7 text-accent">
             {t('footer.social')}
           </h3>
-          <SocialLinks />
+          <SocialLinks className={'mt-7'} />
         </div>
       </div>
     </footer>

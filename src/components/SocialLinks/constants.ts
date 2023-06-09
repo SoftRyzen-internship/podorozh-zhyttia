@@ -9,7 +9,11 @@ export const SOCIAL_MEDIA = [
     icon: Instagram,
     href: 'https://www.instagram.com/podorozhzhyttia',
   },
-  { label: 'socials.telegram-label', icon: Telegram, href: '#' },
+  {
+    label: 'socials.telegram-label',
+    icon: Telegram,
+    href: 'https://t.me/podorozh_zhyttia',
+  },
   {
     label: 'socials.facebook-label',
     icon: Facebook,

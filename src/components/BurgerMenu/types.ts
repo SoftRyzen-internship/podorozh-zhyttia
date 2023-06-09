@@ -1,6 +1,6 @@
 export type TypeBurgerMenuProps = {
   handleCloseModal: () => void;
   offset?: number;
-  activePatch: string | null;
-  onActivePatch: (to: string) => void;
+  activePath: string | null;
+  onActivePath: (to: string) => void;
 };

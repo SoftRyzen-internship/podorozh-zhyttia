@@ -7,21 +7,17 @@ import Logo from '@/components/Logo';
 import BurgerButton from '@/components/BurgerButton';
 import BurgerMenu from '@/components/BurgerMenu';
 
-const Header: FC = () => {
+import { TypeHeaderProps } from './types';
+
+const Header: FC<TypeHeaderProps> = ({
+  activePath,
+  handleActivePath,
+  handleLogoClick,
+}) => {
   const headerRef = useRef<HTMLElement | null>(null);
   const [windowWidth, setWindowWidth] = useState(0);
   const [offset, setOffset] = useState<number>(0);
   const [isOpenModal, setIsOpenModal] = useState<boolean>(false);
-  const [activePath, setActivePath] = useState<string | null>(null);
-
-  const handleWindowResize = () => {
-    setWindowWidth(window.innerWidth);
-  };
-
-  const handleActivePath = (path: string) => {
-    setActivePath(path);
-    handleCloseModal();
-  };
 
   const handleToggleModal = () => {
     setIsOpenModal(!isOpenModal);
@@ -31,10 +27,6 @@ const Header: FC = () => {
     } else {
       document.body.classList.remove('overflow-hidden');
     }
-  };
-
-  const handleCloseModal = () => {
-    setIsOpenModal(false);
   };
 
   useEffect(() => {
@@ -88,13 +80,16 @@ const Header: FC = () => {
       className="fixed top-0 left-0 right-0 z-10 bg-white"
     >
       <div className="container flex items-center justify-between py-[7px] tablet:py-[1.5px]">
-        <Logo className="w-[77px] h-[50px] tablet:w-[111px] tablet:h-[77px]" />
+        <Logo
+          className="w-[77px] h-[50px] tablet:w-[111px] tablet:h-[77px]"
+          handleClick={handleLogoClick}
+        />
 
         <NavBar
-          activePatch={activePath}
-          onActivePatch={handleActivePath}
           className="hidden desktop:block desktop:ml-auto"
           offset={offset}
+          activePath={activePath}
+          onActivePath={handleActivePath}
         />
         {!isOpenModal && (
           <LangSwitcher className="ml-auto mr-8 desktop:ml-[71px]" />
@@ -106,9 +101,9 @@ const Header: FC = () => {
       </div>
       {isOpenModal && (
         <BurgerMenu
-          activePatch={activePath}
-          onActivePatch={setActivePath}
-          handleCloseModal={handleCloseModal}
+          activePath={activePath}
+          onActivePath={handleActivePath}
+          handleCloseModal={handleToggleModal}
           offset={offset}
         />
       )}

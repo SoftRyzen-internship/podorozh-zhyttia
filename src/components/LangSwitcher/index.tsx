@@ -16,6 +16,7 @@ const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
     <ul className={classes}>
       <li>
         <button
+          type="button"
           onClick={() => handleLangChange('uk')}
           className={`${
             locale === 'uk' ? 'text-accent' : 'text-black-charcoal'
@@ -27,6 +28,7 @@ const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
       </li>
       <li>
         <button
+          type="button"
           onClick={() => handleLangChange('en')}
           className={`${
             locale === 'en' ? 'text-accent' : 'text-black-charcoal'
