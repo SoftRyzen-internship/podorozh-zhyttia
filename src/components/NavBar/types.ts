@@ -1,6 +1,6 @@
 export interface INavBarProps {
   offset?: number;
   className?: string;
-  activePatch: string | null;
-  onActivePatch: (to: string) => void;
+  activePath: string | null;
+  onActivePath: (to: string) => void;
 }

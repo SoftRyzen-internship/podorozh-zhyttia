@@ -8,7 +8,7 @@ import { IBurgerButton } from './types';
 
 const BurgerButton: FC<IBurgerButton> = ({
   handleToggleModal,
-  isCloseModal,
+  isOpenModal,
 }) => {
   const { t } = useTranslation();
 
@@ -19,7 +19,7 @@ const BurgerButton: FC<IBurgerButton> = ({
       type="button"
       className="desktop:hidden focus:outline-accent"
     >
-      {isCloseModal ? <Exit /> : <Burger />}
+      {isOpenModal ? <Exit /> : <Burger />}
     </button>
   );
 };

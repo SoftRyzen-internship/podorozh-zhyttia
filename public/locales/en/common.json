@@ -19,7 +19,8 @@
     "report": "See reporting"
   },
   "head": {
-    "title": "Podorozh zhyttia"
+    "title": "Podorozh zhyttia",
+    "description": "Making a difference through charitable efforts. Join our charitable foundation today."
   },
   "hero": {
     "title": "Charitable Foundation \"Podorozh ZHYTTIA\"",
@@ -61,8 +62,10 @@
     "comment": "Comment",
     "error": {
       "name_required": "*The name field is required",
-      "name_min": "*Minimum 2 characters",
+      "name_min": "*Minimum 2 letters",
       "name_max": "*Maximum 70 characters",
+      "name_format": "*Use only letters, spaces, dashes.",
+      "name_space": "*The name must contain letters.",
       "phone_required": "*The phone field is required",
       "phone_format": "*Phone number format: +380XXXXXXXXX",
       "textarea": "Maximum 500 characters",
@@ -72,7 +75,7 @@
     "aria": {
       "name": "Name input field",
       "phone": "Phone number input field",
-      "message": "Error occurred while sending the message"
+      "message": "Comment input field"
     }
   },
   "book": {

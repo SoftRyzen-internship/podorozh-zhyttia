@@ -8,10 +8,11 @@ import { ILogoProps } from './types';
 
 import logoSvg from 'public/images/logo.png';
 
-const Logo: FC<ILogoProps> = ({ className }) => {
+const Logo: FC<ILogoProps> = ({ handleClick, className }) => {
   const { t } = useTranslation();
   return (
     <Link
+      onClick={handleClick}
       className={`block relative cursor-pointer hover:scale-110 ${className} focus:outline-accent`}
       href={'/'}
     >

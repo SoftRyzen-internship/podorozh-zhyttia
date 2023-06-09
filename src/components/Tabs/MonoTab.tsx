@@ -1,8 +1,8 @@
 import { FC } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { useTranslation } from 'next-i18next';
 
-import MonoQR from 'public/svg/monoQR.svg';
 import Arrow from 'public/svg/arrow.svg';
 
 const MonoTab: FC = () => {
@@ -27,7 +27,12 @@ const MonoTab: FC = () => {
         </div>
       </Link>
       <div className="max-w-[280px] max-h-[280px] onlyMobile:mt-10 tablet:w-[152px] tablet:h-[152px] desktop:w-[200px] desktop:h-[200px] mx-auto tablet:mx-0">
-        <MonoQR aria-label={t('donate.aria-monoQR')} />
+        <Image
+          src="/images/tabs/monoQR@2x.png"
+          alt={t('donate.aria-monoQR')}
+          width={280}
+          height={280}
+        />
       </div>
     </article>
   );
