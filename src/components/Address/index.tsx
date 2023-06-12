@@ -12,7 +12,7 @@ const Address: FC<typeAddressProps> = ({ className }) => {
       <h3 className="text-lg text-accent font-bold leading-7">
         {t('footer.contacts')}
       </h3>
-      <address className="mt-7">
+      <address className="mt-7 not-italic">
         <ul className="flex flex-col gap-5">
           <li>
             <Link
