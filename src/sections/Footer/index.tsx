@@ -8,7 +8,7 @@ import Logo from '@/components/Logo';
 
 import { TypeFooterProps } from './types';
 
-const Footer: FC<TypeFooterProps> = ({ handleLogoClick }) => {
+const Footer: FC<TypeFooterProps> = ({ resetActivePath }) => {
   const { t } = useTranslation();
 
   return (
@@ -17,7 +17,7 @@ const Footer: FC<TypeFooterProps> = ({ handleLogoClick }) => {
         <div className=" onlyTablet:absolute onlyTablet:top-0 onlyTablet:left-8 desktop:mr-[262px]">
           <Logo
             className="w-[100px] h-[65px] desktop:w-[154px] desktop:h-[100px]"
-            handleClick={handleLogoClick}
+            handleClick={resetActivePath}
           />
         </div>
         <Address className="mt-10 onlyTablet:w-1/2 tablet:mt-0  onlyTablet:order-1 desktop:mr-[262px]" />

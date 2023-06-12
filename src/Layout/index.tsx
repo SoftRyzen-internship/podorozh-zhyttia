@@ -15,7 +15,7 @@ const Layout: FC<TypeLayoutProps> = ({ children }) => {
     setActivePath(path);
   };
 
-  const handleLogoClick = () => {
+  const resetActivePath = () => {
     setActivePath(null);
   };
 
@@ -31,10 +31,10 @@ const Layout: FC<TypeLayoutProps> = ({ children }) => {
       <Header
         activePath={activePath}
         handleActivePath={handleActivePath}
-        handleLogoClick={handleLogoClick}
+        resetActivePath={resetActivePath}
       />
       <main>{children}</main>
-      <Footer handleLogoClick={handleLogoClick} />
+      <Footer resetActivePath={resetActivePath} />
     </>
   );
 };
