@@ -1,3 +1,3 @@
 export type TypeFooterProps = {
-  handleLogoClick: () => void;
+  resetActivePath: () => void;
 };

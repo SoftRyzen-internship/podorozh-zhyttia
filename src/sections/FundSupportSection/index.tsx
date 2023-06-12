@@ -20,6 +20,9 @@ const FundSupportSection: FC = () => {
             <p className="tablet:w-[353px] desktop:w-[500px] text-base leading-6 font-normal mt-7 text-center tablet:text-left">
               {t('support.description')}
             </p>
+            <p className="text-accent tablet:w-[353px] desktop:w-[500px] text-base leading-6 font-normal mt-5 text-center tablet:text-left">
+              {t('support.link')}
+            </p>
           </div>
           <LinkButton
             className="onlyMobile:mt-8"
