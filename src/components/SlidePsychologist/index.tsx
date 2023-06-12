@@ -9,7 +9,7 @@ const SlidePsychologist: FC<TypePsychologist> = ({
   psychologistPhoto,
 }) => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center tablet:w-[336px]  desktop:w-[384px]">
       <div className="relative w-full h-[350px] tablet:w-[336px] tablet:h-[350px] desktop:w-[384px] desktop:h-[400px]">
         <Image
           src={psychologistPhoto.url}
@@ -19,7 +19,7 @@ const SlidePsychologist: FC<TypePsychologist> = ({
           className="object-cover object-top h-full w-full"
         />
       </div>
-      <div className="small:h-[180px] flex flex-col py-7 px-5 tablet:px-7 desktop:px-7 bg-white">
+      <div className="w-full small:h-[180px] flex flex-col py-7 px-5 tablet:px-7 desktop:px-7 bg-white">
         <p className="text-xl leading-8 font-semibold text-black-charcoal">
           {name}
         </p>
