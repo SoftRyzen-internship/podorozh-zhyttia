@@ -12,7 +12,7 @@ import { TypeHeaderProps } from './types';
 const Header: FC<TypeHeaderProps> = ({
   activePath,
   handleActivePath,
-  handleLogoClick,
+  resetActivePath,
 }) => {
   const headerRef = useRef<HTMLElement | null>(null);
   const [windowWidth, setWindowWidth] = useState(0);
@@ -30,7 +30,7 @@ const Header: FC<TypeHeaderProps> = ({
   };
 
   const handleClickOnLogo = () => {
-    handleLogoClick();
+    resetActivePath();
     setIsOpenModal(false);
   };
 
@@ -97,7 +97,10 @@ const Header: FC<TypeHeaderProps> = ({
           onActivePath={handleActivePath}
         />
         {!isOpenModal && (
-          <LangSwitcher className="ml-auto mr-8 desktop:ml-[71px]" />
+          <LangSwitcher
+            onClick={resetActivePath}
+            className="ml-auto mr-8 desktop:ml-[71px]"
+          />
         )}
         <BurgerButton
           handleToggleModal={handleToggleModal}

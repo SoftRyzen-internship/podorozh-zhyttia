@@ -3,13 +3,16 @@ import { useRouter } from 'next/router';
 
 import { ILangSwitcherProps } from './types';
 
-const LangSwitcher: FC<ILangSwitcherProps> = ({ className }) => {
+const LangSwitcher: FC<ILangSwitcherProps> = ({ className, onClick }) => {
   const router = useRouter();
   const { locale } = router;
   const classes = `flex gap-6 text-base font-semibold ${className}`;
 
   const handleLangChange = (newLocale: string) => {
     router.push(router.pathname, router.asPath, { locale: newLocale });
+    if (typeof onClick === 'function') {
+      onClick();
+    }
   };
 
   return (
