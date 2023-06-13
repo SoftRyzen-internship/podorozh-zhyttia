@@ -24,7 +24,7 @@
   },
   "hero": {
     "title": "Charitable Foundation \"Podorozh ZHYTTIA\"",
-    "description": "We organize fundraising for units of the Armed Forces of Ukraine by request. Also we will be happy to help in questions of rehabilitation"
+    "description": "We organize fundraising for units of the Armed Forces of Ukraine by request. Also, we will be happy to help with questions about rehabilitation issues"
   },
   "psyhological_help": "Psychological help",
   "donate": {
@@ -45,13 +45,13 @@
   },
   "support": {
     "title": "Donate",
-    "description": "To support charity foundation. Foundation do not pay any salaries as volunteers work here. And we will be happy to get support",
+    "description": "To support the charity foundation. The foundation does not pay any salaries as volunteers work here. And we will be happy to get support",
     "link": "*indicate the purpose of the payment \"For statutory activity\""
   },
   "feedback": {
-    "title": "Contact to psychologist",
+    "title": "Contact our psychologist",
     "steps": [
-      "If you are in despair, hopelessness, in a difficult situation, have lost faith, meanings, support",
+      "If you are in despair, hopeless, in a difficult situation, or have lost faith, meaning, or support",
       "If you lost a loved one or a dear person, or a friend",
       "If you need support or help",
       "If you simply have something to say - write"
@@ -82,7 +82,7 @@
   "book": {
     "title": "How are you?",
     "subtitle": "Books for psychological support to each other",
-    "description": "<1>Books for military and civilians, that help to learn how to give psychological support to each other during the war.</1><2> Because of the war, there are a lot of people with the trauma experience and there are not enough psychologists. That’s why each of us can be a psychologist a little bit for those who need support or help.</2>",
+    "description": "<1>Books for military and civilians, that help to learn how to give psychological support to each other during the war.</1><2> Because of the war, there are many people with trauma experience and not enough psychologists. That’s why each of us can be a psychologist a little bit for those who need support or help.</2>",
     "author": "Anton Semenov, psychologist",
     "alt": "The book \"How are you Bro?\""
   },
@@ -107,7 +107,6 @@
   "socials": {
     "facebook-label": "Visit our facebook page",
     "telegram-label": "Visit our telegram page",
-    "youtube-label": "Visit our youtube page",
     "instagram-label": "Visit our instagram page"
   },
   "bunner_gallery": {
