@@ -26,7 +26,7 @@ const FundSupportSection: FC = () => {
           </div>
           <LinkButton
             className="onlyMobile:mt-8"
-            href="https://next.privat24.ua/payments/form/%7B%22token%22%3A%2287accea8-7d2c-48d5-a308-174fa1becc56%22%7D"
+            href="https://pb.ua/short?5YVQR"
           >
             {t('btn.support')}
           </LinkButton>
