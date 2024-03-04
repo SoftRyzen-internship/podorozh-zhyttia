@@ -26,7 +26,7 @@ const FundSupportSection: FC = () => {
           </div>
           <LinkButton
             className="onlyMobile:mt-8"
-            href="https://pb.ua/short?5YVQR"
+            href="https://pb.ua/short?5YVQS"
           >
             {t('btn.support')}
           </LinkButton>
