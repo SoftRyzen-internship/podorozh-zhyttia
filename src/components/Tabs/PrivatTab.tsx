@@ -63,7 +63,7 @@ const PrivatTab: FC = () => {
           </div>
         </div>
         <Link
-          href="https://next.privat24.ua/payments/form/%7B%22token%22%3A%2287accea8-7d2c-48d5-a308-174fa1becc56%22%7D"
+          href="https://pb.ua/short?5YVQR"
           target="_blank"
           rel="noopener noreferrer nofollow"
           className="group focus:outline-accent focus:outline-4 focus:outline-offset-4"
